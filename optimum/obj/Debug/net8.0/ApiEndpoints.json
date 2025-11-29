@@ -1,0 +1,418 @@
+[
+  {
+    "ContainingType": "optimum.Controllers.AccountController",
+    "Method": "Login",
+    "RelativePath": "api/Account/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDto",
+        "Type": "optimum.service.Authentication.Dtos.AuthDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "optimum.Controllers.AccountController",
+    "Method": "UserRegister",
+    "RelativePath": "api/Account/userRegister",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerDto",
+        "Type": "optimum.service.Authentication.Dtos.AuthDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "optimum.Controllers.ConfirmRequestController",
+    "Method": "GetConfirmedItems",
+    "RelativePath": "api/ConfirmRequest/{requestId}/confirmed-items",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "optimum.Controllers.ConfirmRequestController",
+    "Method": "GetConfirmedItemsBySchool",
+    "RelativePath": "api/ConfirmRequest/by-school/{schoolId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "schoolId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "optimum.Controllers.ConfirmRequestController",
+    "Method": "UpdateConfirmedItems",
+    "RelativePath": "api/ConfirmRequest/confirmed-items/{requestId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "items",
+        "Type": "System.Collections.Generic.List\u00601[[optimum.service.ConfirmParsedItemsRequest.Dtos.UpdateConfirmedItemDto, optimum.service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "optimum.Controllers.ProductsController",
+    "Method": "Add",
+    "RelativePath": "api/Products/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "optimum.service.Product.Dtos.ProductCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "optimum.Controllers.ProductsController",
+    "Method": "Delete",
+    "RelativePath": "api/Products/Delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "optimum.Controllers.ProductsController",
+    "Method": "GetAll",
+    "RelativePath": "api/Products/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "optimum.Controllers.ProductsController",
+    "Method": "GetById",
+    "RelativePath": "api/Products/GetById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "optimum.Controllers.ProductsController",
+    "Method": "Update",
+    "RelativePath": "api/Products/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "optimum.service.Product.Dtos.ProductUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "optimum.Controllers.SchoolRequestController",
+    "Method": "Create",
+    "RelativePath": "api/SchoolRequest/CreateByList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "optimum.service.SchoolRequest.Dtos.CreateSchoolRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "optimum.Controllers.SchoolRequestController",
+    "Method": "CreateFreeTxt",
+    "RelativePath": "api/SchoolRequest/CreateFreeTxt",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "optimum.service.SchoolRequest.Dtos.CreateSchoolRequestFreeTxtDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "optimum.Controllers.SchoolRequestController",
+    "Method": "CreateFromFile",
+    "RelativePath": "api/SchoolRequest/CreateFromFile",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "SchoolId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "RequestType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "File",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "optimum.Controllers.SchoolRequestController",
+    "Method": "CreateFromVoice",
+    "RelativePath": "api/SchoolRequest/CreateFromVoice",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "SchoolId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "RequestType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Audio",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "optimum.Controllers.SchoolsController",
+    "Method": "Create",
+    "RelativePath": "api/Schools/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "optimum.service.Schools.Dtos.CreateSchoolDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "optimum.Controllers.SchoolsController",
+    "Method": "Delete",
+    "RelativePath": "api/Schools/Delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "optimum.Controllers.SchoolsController",
+    "Method": "GetById",
+    "RelativePath": "api/Schools/GetById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "optimum.Controllers.SchoolsController",
+    "Method": "Register",
+    "RelativePath": "api/Schools/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "optimum.service.Schools.Dtos.RegisterSchoolDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "optimum.Controllers.SuppliersController",
+    "Method": "Create",
+    "RelativePath": "api/Suppliers/CreateNewSupplier",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "optimum.service.Supplier.Dtos.CreateSupplierDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "optimum.service.Supplier.Dtos.SupplierDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "optimum.Controllers.SuppliersController",
+    "Method": "Delete",
+    "RelativePath": "api/Suppliers/DeleteSupplier{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "optimum.Controllers.SuppliersController",
+    "Method": "GetAll",
+    "RelativePath": "api/Suppliers/GetAllSuppliers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[optimum.service.Supplier.Dtos.SupplierDto, optimum.service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "optimum.Controllers.SuppliersController",
+    "Method": "GetById",
+    "RelativePath": "api/Suppliers/GetSupplierById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "optimum.service.Supplier.Dtos.SupplierDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "optimum.Controllers.SuppliersController",
+    "Method": "Update",
+    "RelativePath": "api/Suppliers/UpdateExistingSupplier/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "optimum.service.Supplier.Dtos.UpdateSupplierDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -1,0 +1,6 @@
+@optimum_HostAddress = http://localhost:5042
+
+GET {{optimum_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
