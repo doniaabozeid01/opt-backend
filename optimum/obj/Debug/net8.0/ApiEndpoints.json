@@ -396,6 +396,22 @@
   },
   {
     "ContainingType": "optimum.Controllers.SuppliersController",
+    "Method": "Register",
+    "RelativePath": "api/Suppliers/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "optimum.service.Supplier.Dtos.RegisterSupplierDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "optimum.Controllers.SuppliersController",
     "Method": "Update",
     "RelativePath": "api/Suppliers/UpdateExistingSupplier/{id}",
     "HttpMethod": "PUT",

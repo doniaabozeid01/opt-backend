@@ -126,7 +126,8 @@ namespace optimum.Controllers
                     Message = "Login successful",
                     Token = token,
                     UserId = user.Id,
-                    Email = user.Email
+                    Email = user.Email,
+                    Role = _roleManager.FindByIdAsync(user.Id),
                 });
             }
 

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using optimum.data.Context;
 
@@ -11,9 +12,11 @@ using optimum.data.Context;
 namespace optimum.data.Migrations
 {
     [DbContext(typeof(OptimumDbContext))]
-    partial class OptimumDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251130184722_update-supplier-table")]
+    partial class updatesuppliertable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

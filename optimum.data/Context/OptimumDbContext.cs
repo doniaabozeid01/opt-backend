@@ -26,10 +26,19 @@ namespace optimum.data.Context
                                                 // 
 
             modelBuilder.Entity<SupplierRequestItem>()
-    .HasOne(sri => sri.SchoolConfirmedRequestItem)
-    .WithMany() // أو WithMany(x => x.SupplierRequestItems) لو عندك Navigation
-    .HasForeignKey(sri => sri.SchoolConfirmedRequestItemId)
-    .OnDelete(DeleteBehavior.NoAction);  // هنا المهم
+                .HasOne(sri => sri.SchoolConfirmedRequestItem)
+                .WithMany() // أو WithMany(x => x.SupplierRequestItems) لو عندك Navigation
+                .HasForeignKey(sri => sri.SchoolConfirmedRequestItemId)
+                .OnDelete(DeleteBehavior.NoAction);  // هنا المهم
+
+
+            modelBuilder.Entity<Suppliers>()
+               .HasOne(s => s.User)
+               .WithMany() // أو .WithMany(u => u.Suppliers) لو عندك ICollection<Suppliers> في ApplicationUser
+               .HasForeignKey(s => s.UserId)
+               .OnDelete(DeleteBehavior.NoAction); // أو Restrict
+
+
 
         }
 

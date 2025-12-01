@@ -3,10 +3,62 @@
   "WorkspaceRootPath": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Migrations\\20251129204910_addSupplierRequestItems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DD5C686D-906A-4C2D-8083-8427C755BE59}|..\\optimum.data\\optimum.data.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\migrations\\20251130184722_update-supplier-table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD5C686D-906A-4C2D-8083-8427C755BE59}|..\\optimum.data\\optimum.data.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\context\\optimumdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD5C686D-906A-4C2D-8083-8427C755BE59}|..\\optimum.data\\optimum.data.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\entities\\suppliers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Migrations\\20251130184102_update-supplier-table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E98AEFF5-6B97-4B45-8265-0942337A772D}|optimum.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E98AEFF5-6B97-4B45-8265-0942337A772D}|optimum.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E98AEFF5-6B97-4B45-8265-0942337A772D}|optimum.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum\\controllers\\supplierscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E98AEFF5-6B97-4B45-8265-0942337A772D}|optimum.csproj|solutionrelative:controllers\\supplierscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6F7788D-31F4-475A-AABB-217169F7BCC6}|..\\optimum.service\\optimum.service.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\supplier\\suppliersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6F7788D-31F4-475A-AABB-217169F7BCC6}|..\\optimum.service\\optimum.service.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\supplier\\isuppliersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6F7788D-31F4-475A-AABB-217169F7BCC6}|..\\optimum.service\\optimum.service.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\supplier\\dtos\\createsupplierdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6F7788D-31F4-475A-AABB-217169F7BCC6}|..\\optimum.service\\optimum.service.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\supplier\\dtos\\updatesupplierdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6F7788D-31F4-475A-AABB-217169F7BCC6}|..\\optimum.service\\optimum.service.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\supplier\\dtos\\supplierdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6F7788D-31F4-475A-AABB-217169F7BCC6}|..\\optimum.service\\optimum.service.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\supplier\\dtos\\registersupplierdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD5C686D-906A-4C2D-8083-8427C755BE59}|..\\optimum.data\\optimum.data.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\entities\\school.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6F7788D-31F4-475A-AABB-217169F7BCC6}|..\\optimum.service\\optimum.service.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\schools\\schoolservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6F7788D-31F4-475A-AABB-217169F7BCC6}|..\\optimum.service\\optimum.service.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\schools\\dtos\\registerschooldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E98AEFF5-6B97-4B45-8265-0942337A772D}|optimum.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum\\controllers\\schoolscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E98AEFF5-6B97-4B45-8265-0942337A772D}|optimum.csproj|solutionrelative:controllers\\schoolscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E98AEFF5-6B97-4B45-8265-0942337A772D}|optimum.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E98AEFF5-6B97-4B45-8265-0942337A772D}|optimum.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD5C686D-906A-4C2D-8083-8427C755BE59}|..\\optimum.data\\optimum.data.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\migrations\\20251129204910_addsupplierrequestitems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD5C686D-906A-4C2D-8083-8427C755BE59}|..\\optimum.data\\optimum.data.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\entities\\supplierrequestitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -26,34 +78,8 @@
       "RelativeMoniker": "D:0:0:{E98AEFF5-6B97-4B45-8265-0942337A772D}|optimum.csproj|solutionrelative:controllers\\schoolrequestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E98AEFF5-6B97-4B45-8265-0942337A772D}|optimum.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum\\controllers\\schoolscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E98AEFF5-6B97-4B45-8265-0942337A772D}|optimum.csproj|solutionrelative:controllers\\schoolscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E98AEFF5-6B97-4B45-8265-0942337A772D}|optimum.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum\\controllers\\supplierscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E98AEFF5-6B97-4B45-8265-0942337A772D}|optimum.csproj|solutionrelative:controllers\\supplierscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E98AEFF5-6B97-4B45-8265-0942337A772D}|optimum.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E98AEFF5-6B97-4B45-8265-0942337A772D}|optimum.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6F7788D-31F4-475A-AABB-217169F7BCC6}|..\\optimum.service\\optimum.service.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\supplier\\suppliersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6F7788D-31F4-475A-AABB-217169F7BCC6}|..\\optimum.service\\optimum.service.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\supplier\\isuppliersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6F7788D-31F4-475A-AABB-217169F7BCC6}|..\\optimum.service\\optimum.service.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\supplier\\dtos\\updatesupplierdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6F7788D-31F4-475A-AABB-217169F7BCC6}|..\\optimum.service\\optimum.service.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\supplier\\dtos\\supplierdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6F7788D-31F4-475A-AABB-217169F7BCC6}|..\\optimum.service\\optimum.service.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\supplier\\dtos\\createsupplierdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD5C686D-906A-4C2D-8083-8427C755BE59}|..\\optimum.data\\optimum.data.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\entities\\suppliers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD5C686D-906A-4C2D-8083-8427C755BE59}|..\\optimum.data\\optimum.data.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\entities\\supplierproducts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -62,13 +88,7 @@
       "AbsoluteMoniker": "D:0:0:{DD5C686D-906A-4C2D-8083-8427C755BE59}|..\\optimum.data\\optimum.data.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\entities\\schoolrequestitems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Migrations\\20251129185126_updateSupplierRequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DD5C686D-906A-4C2D-8083-8427C755BE59}|..\\optimum.data\\optimum.data.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\entities\\supplieroffers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Migrations\\20251129181338_updateSupplierOfferItemAndAddSupplierRequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD5C686D-906A-4C2D-8083-8427C755BE59}|..\\optimum.data\\optimum.data.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\entities\\supplierofferitems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -96,10 +116,6 @@
       "AbsoluteMoniker": "D:0:0:{E6F7788D-31F4-475A-AABB-217169F7BCC6}|..\\optimum.service\\optimum.service.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\textrequestsparser\\textrequestparserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E98AEFF5-6B97-4B45-8265-0942337A772D}|optimum.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E98AEFF5-6B97-4B45-8265-0942337A772D}|optimum.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DD5C686D-906A-4C2D-8083-8427C755BE59}|..\\optimum.data\\optimum.data.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\enum\\requesttypeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -110,10 +126,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{EE82A1FB-AA51-4CC8-83CF-B821BA7AEC18}|..\\optimum.repository\\optimum.repository.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum.repository\\optimum.repository.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E98AEFF5-6B97-4B45-8265-0942337A772D}|optimum.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E98AEFF5-6B97-4B45-8265-0942337A772D}|optimum.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E98AEFF5-6B97-4B45-8265-0942337A772D}|optimum.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum\\optimum.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -220,6 +232,12 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD5C686D-906A-4C2D-8083-8427C755BE59}|..\\optimum.data\\optimum.data.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\migrations\\20251127231809_updateconfirmschoolorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD5C686D-906A-4C2D-8083-8427C755BE59}|..\\optimum.data\\optimum.data.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\migrations\\20251129185126_updatesupplierrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD5C686D-906A-4C2D-8083-8427C755BE59}|..\\optimum.data\\optimum.data.csproj|e:\\me\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\migrations\\20251129181338_updatesupplierofferitemandaddsupplierrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -258,92 +276,118 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "20251129204910_addSupplierRequestItems.cs",
-              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Migrations\\20251129204910_addSupplierRequestItems.cs",
-              "RelativeDocumentMoniker": "..\\optimum.data\\Migrations\\20251129204910_addSupplierRequestItems.cs",
-              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Migrations\\20251129204910_addSupplierRequestItems.cs",
-              "RelativeToolTip": "..\\optimum.data\\Migrations\\20251129204910_addSupplierRequestItems.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAABCAAAAAAAAAA==",
+              "Title": "20251130184722_update-supplier-table.cs",
+              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Migrations\\20251130184722_update-supplier-table.cs",
+              "RelativeDocumentMoniker": "..\\optimum.data\\Migrations\\20251130184722_update-supplier-table.cs",
+              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Migrations\\20251130184722_update-supplier-table.cs",
+              "RelativeToolTip": "..\\optimum.data\\Migrations\\20251130184722_update-supplier-table.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAUwDcAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T20:49:10.965Z",
+              "WhenOpened": "2025-11-30T18:47:23.253Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SupplierRequestItem.cs",
-              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Entities\\SupplierRequestItem.cs",
-              "RelativeDocumentMoniker": "..\\optimum.data\\Entities\\SupplierRequestItem.cs",
-              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Entities\\SupplierRequestItem.cs",
-              "RelativeToolTip": "..\\optimum.data\\Entities\\SupplierRequestItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "20251130184102_update-supplier-table.cs",
+              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Migrations\\20251130184102_update-supplier-table.cs",
+              "RelativeDocumentMoniker": "..\\optimum.data\\Migrations\\20251130184102_update-supplier-table.cs",
+              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Migrations\\20251130184102_update-supplier-table.cs",
+              "RelativeToolTip": "..\\optimum.data\\Migrations\\20251130184102_update-supplier-table.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAgwC0AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T19:47:36.964Z",
+              "WhenOpened": "2025-11-30T18:41:02.123Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
+              "Title": "RegisterSupplierDto.cs",
+              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\Supplier\\Dtos\\RegisterSupplierDto.cs",
+              "RelativeDocumentMoniker": "..\\optimum.service\\Supplier\\Dtos\\RegisterSupplierDto.cs",
+              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\Supplier\\Dtos\\RegisterSupplierDto.cs",
+              "RelativeToolTip": "..\\optimum.service\\Supplier\\Dtos\\RegisterSupplierDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T17:45:26.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "SuppliersController.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum\\Controllers\\SuppliersController.cs",
               "RelativeDocumentMoniker": "Controllers\\SuppliersController.cs",
               "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum\\Controllers\\SuppliersController.cs",
               "RelativeToolTip": "Controllers\\SuppliersController.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAIwDoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAQwFUAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-29T19:14:11.919Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SupplierRequest.cs",
-              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Entities\\SupplierRequest.cs",
-              "RelativeDocumentMoniker": "..\\optimum.data\\Entities\\SupplierRequest.cs",
-              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Entities\\SupplierRequest.cs",
-              "RelativeToolTip": "..\\optimum.data\\Entities\\SupplierRequest.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAA9wBsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T18:00:17.127Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SchoolsController.cs",
-              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum\\Controllers\\SchoolsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\SchoolsController.cs",
-              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum\\Controllers\\SchoolsController.cs",
-              "RelativeToolTip": "Controllers\\SchoolsController.cs",
-              "ViewState": "AgIAAGcAAAAAAAAAAAAuwGwAAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-23T17:08:32.78Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "SchoolRequestController.cs",
-              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum\\Controllers\\SchoolRequestController.cs",
-              "RelativeDocumentMoniker": "Controllers\\SchoolRequestController.cs",
-              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum\\Controllers\\SchoolRequestController.cs",
-              "RelativeToolTip": "Controllers\\SchoolRequestController.cs",
-              "ViewState": "AgIAAKUAAAAAAAAAAAAuwI0AAAAxAAAAAAAAAA==",
+              "Title": "SuppliersService.cs",
+              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\Supplier\\SuppliersService.cs",
+              "RelativeDocumentMoniker": "..\\optimum.service\\Supplier\\SuppliersService.cs",
+              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\Supplier\\SuppliersService.cs",
+              "RelativeToolTip": "..\\optimum.service\\Supplier\\SuppliersService.cs",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAmwJQAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-23T21:32:14.654Z",
+              "WhenOpened": "2025-11-29T19:12:34.077Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ConfirmRequestController.cs",
-              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum\\Controllers\\ConfirmRequestController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ConfirmRequestController.cs",
-              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum\\Controllers\\ConfirmRequestController.cs",
-              "RelativeToolTip": "Controllers\\ConfirmRequestController.cs",
-              "ViewState": "AgIAAJMBAAAAAAAAAAAqwLABAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Suppliers.cs",
+              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Entities\\Suppliers.cs",
+              "RelativeDocumentMoniker": "..\\optimum.data\\Entities\\Suppliers.cs",
+              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Entities\\Suppliers.cs",
+              "RelativeToolTip": "..\\optimum.data\\Entities\\Suppliers.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAAAwAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T21:51:53.475Z",
+              "WhenOpened": "2025-11-29T19:09:23.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CreateSupplierDto.cs",
+              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\Supplier\\Dtos\\CreateSupplierDto.cs",
+              "RelativeDocumentMoniker": "..\\optimum.service\\Supplier\\Dtos\\CreateSupplierDto.cs",
+              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\Supplier\\Dtos\\CreateSupplierDto.cs",
+              "RelativeToolTip": "..\\optimum.service\\Supplier\\Dtos\\CreateSupplierDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T19:11:35.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SupplierDto.cs",
+              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\Supplier\\Dtos\\SupplierDto.cs",
+              "RelativeDocumentMoniker": "..\\optimum.service\\Supplier\\Dtos\\SupplierDto.cs",
+              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\Supplier\\Dtos\\SupplierDto.cs",
+              "RelativeToolTip": "..\\optimum.service\\Supplier\\Dtos\\SupplierDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T19:11:18.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UpdateSupplierDto.cs",
+              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\Supplier\\Dtos\\UpdateSupplierDto.cs",
+              "RelativeDocumentMoniker": "..\\optimum.service\\Supplier\\Dtos\\UpdateSupplierDto.cs",
+              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\Supplier\\Dtos\\UpdateSupplierDto.cs",
+              "RelativeToolTip": "..\\optimum.service\\Supplier\\Dtos\\UpdateSupplierDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T19:11:49.215Z",
               "EditorCaption": ""
             },
             {
@@ -354,14 +398,166 @@
               "RelativeDocumentMoniker": "..\\optimum.data\\Context\\OptimumDbContext.cs",
               "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Context\\OptimumDbContext.cs",
               "RelativeToolTip": "..\\optimum.data\\Context\\OptimumDbContext.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAIwCAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAowCkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-27T18:35:07.839Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SchoolService.cs",
+              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\Schools\\SchoolService.cs",
+              "RelativeDocumentMoniker": "..\\optimum.service\\Schools\\SchoolService.cs",
+              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\Schools\\SchoolService.cs",
+              "RelativeToolTip": "..\\optimum.service\\Schools\\SchoolService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T17:46:58.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ISuppliersService.cs",
+              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\Supplier\\ISuppliersService.cs",
+              "RelativeDocumentMoniker": "..\\optimum.service\\Supplier\\ISuppliersService.cs",
+              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\Supplier\\ISuppliersService.cs",
+              "RelativeToolTip": "..\\optimum.service\\Supplier\\ISuppliersService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T19:12:16.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-23T17:08:32.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "School.cs",
+              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Entities\\School.cs",
+              "RelativeDocumentMoniker": "..\\optimum.data\\Entities\\School.cs",
+              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Entities\\School.cs",
+              "RelativeToolTip": "..\\optimum.data\\Entities\\School.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T17:50:38.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RegisterSchoolDto.cs",
+              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\Schools\\Dtos\\RegisterSchoolDto.cs",
+              "RelativeDocumentMoniker": "..\\optimum.service\\Schools\\Dtos\\RegisterSchoolDto.cs",
+              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\Schools\\Dtos\\RegisterSchoolDto.cs",
+              "RelativeToolTip": "..\\optimum.service\\Schools\\Dtos\\RegisterSchoolDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T17:45:27.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "SchoolRequestController.cs",
+              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum\\Controllers\\SchoolRequestController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SchoolRequestController.cs",
+              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum\\Controllers\\SchoolRequestController.cs",
+              "RelativeToolTip": "Controllers\\SchoolRequestController.cs",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAuwI0AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T21:32:14.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SchoolsController.cs",
+              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum\\Controllers\\SchoolsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SchoolsController.cs",
+              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum\\Controllers\\SchoolsController.cs",
+              "RelativeToolTip": "Controllers\\SchoolsController.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAuwHsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T17:08:32.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "SupplierRequest.cs",
+              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Entities\\SupplierRequest.cs",
+              "RelativeDocumentMoniker": "..\\optimum.data\\Entities\\SupplierRequest.cs",
+              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Entities\\SupplierRequest.cs",
+              "RelativeToolTip": "..\\optimum.data\\Entities\\SupplierRequest.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA9wBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T18:00:17.127Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "20251129204910_addSupplierRequestItems.cs",
+              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Migrations\\20251129204910_addSupplierRequestItems.cs",
+              "RelativeDocumentMoniker": "..\\optimum.data\\Migrations\\20251129204910_addSupplierRequestItems.cs",
+              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Migrations\\20251129204910_addSupplierRequestItems.cs",
+              "RelativeToolTip": "..\\optimum.data\\Migrations\\20251129204910_addSupplierRequestItems.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T20:49:10.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ConfirmRequestController.cs",
+              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum\\Controllers\\ConfirmRequestController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ConfirmRequestController.cs",
+              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum\\Controllers\\ConfirmRequestController.cs",
+              "RelativeToolTip": "Controllers\\ConfirmRequestController.cs",
+              "ViewState": "AgIAAJMBAAAAAAAAAAAqwLABAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T21:51:53.475Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 16,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAYwHQAAAB3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T17:08:32.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "SupplierRequestItem.cs",
+              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Entities\\SupplierRequestItem.cs",
+              "RelativeDocumentMoniker": "..\\optimum.data\\Entities\\SupplierRequestItem.cs",
+              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Entities\\SupplierRequestItem.cs",
+              "RelativeToolTip": "..\\optimum.data\\Entities\\SupplierRequestItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T19:47:36.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "SupplierProducts.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Entities\\SupplierProducts.cs",
               "RelativeDocumentMoniker": "..\\optimum.data\\Entities\\SupplierProducts.cs",
@@ -369,12 +565,11 @@
               "RelativeToolTip": "..\\optimum.data\\Entities\\SupplierProducts.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T18:59:23.97Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T18:59:23.97Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 21,
               "Title": "SchoolConfirmedRequestItems.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Entities\\SchoolConfirmedRequestItems.cs",
               "RelativeDocumentMoniker": "..\\optimum.data\\Entities\\SchoolConfirmedRequestItems.cs",
@@ -382,12 +577,11 @@
               "RelativeToolTip": "..\\optimum.data\\Entities\\SchoolConfirmedRequestItems.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAowBQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T21:44:14.24Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-27T21:44:14.24Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 23,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -395,12 +589,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAEYAAAAAAAAAAAAMwF0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-23T17:08:32.778Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-23T17:08:32.778Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 25,
               "Title": "SchoolRequestItems.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Entities\\SchoolRequestItems.cs",
               "RelativeDocumentMoniker": "..\\optimum.data\\Entities\\SchoolRequestItems.cs",
@@ -408,90 +601,11 @@
               "RelativeToolTip": "..\\optimum.data\\Entities\\SchoolRequestItems.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T18:54:21.309Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T18:54:21.309Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Suppliers.cs",
-              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Entities\\Suppliers.cs",
-              "RelativeDocumentMoniker": "..\\optimum.data\\Entities\\Suppliers.cs",
-              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Entities\\Suppliers.cs",
-              "RelativeToolTip": "..\\optimum.data\\Entities\\Suppliers.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T19:09:23.189Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "SupplierDto.cs",
-              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\Supplier\\Dtos\\SupplierDto.cs",
-              "RelativeDocumentMoniker": "..\\optimum.service\\Supplier\\Dtos\\SupplierDto.cs",
-              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\Supplier\\Dtos\\SupplierDto.cs",
-              "RelativeToolTip": "..\\optimum.service\\Supplier\\Dtos\\SupplierDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T19:11:18.437Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CreateSupplierDto.cs",
-              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\Supplier\\Dtos\\CreateSupplierDto.cs",
-              "RelativeDocumentMoniker": "..\\optimum.service\\Supplier\\Dtos\\CreateSupplierDto.cs",
-              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\Supplier\\Dtos\\CreateSupplierDto.cs",
-              "RelativeToolTip": "..\\optimum.service\\Supplier\\Dtos\\CreateSupplierDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T19:11:35.917Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UpdateSupplierDto.cs",
-              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\Supplier\\Dtos\\UpdateSupplierDto.cs",
-              "RelativeDocumentMoniker": "..\\optimum.service\\Supplier\\Dtos\\UpdateSupplierDto.cs",
-              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\Supplier\\Dtos\\UpdateSupplierDto.cs",
-              "RelativeToolTip": "..\\optimum.service\\Supplier\\Dtos\\UpdateSupplierDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T19:11:49.215Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ISuppliersService.cs",
-              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\Supplier\\ISuppliersService.cs",
-              "RelativeDocumentMoniker": "..\\optimum.service\\Supplier\\ISuppliersService.cs",
-              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\Supplier\\ISuppliersService.cs",
-              "RelativeToolTip": "..\\optimum.service\\Supplier\\ISuppliersService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T19:12:16.173Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SuppliersService.cs",
-              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\Supplier\\SuppliersService.cs",
-              "RelativeDocumentMoniker": "..\\optimum.service\\Supplier\\SuppliersService.cs",
-              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\Supplier\\SuppliersService.cs",
-              "RelativeToolTip": "..\\optimum.service\\Supplier\\SuppliersService.cs",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAAABYAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T19:12:34.077Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 74,
               "Title": "20251129185126_updateSupplierRequest.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Migrations\\20251129185126_updateSupplierRequest.cs",
               "RelativeDocumentMoniker": "..\\optimum.data\\Migrations\\20251129185126_updateSupplierRequest.cs",
@@ -499,12 +613,11 @@
               "RelativeToolTip": "..\\optimum.data\\Migrations\\20251129185126_updateSupplierRequest.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAQwCEAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T18:51:26.691Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T18:51:26.691Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 75,
               "Title": "20251129181338_updateSupplierOfferItemAndAddSupplierRequest.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Migrations\\20251129181338_updateSupplierOfferItemAndAddSupplierRequest.cs",
               "RelativeDocumentMoniker": "..\\optimum.data\\Migrations\\20251129181338_updateSupplierOfferItemAndAddSupplierRequest.cs",
@@ -512,12 +625,11 @@
               "RelativeToolTip": "..\\optimum.data\\Migrations\\20251129181338_updateSupplierOfferItemAndAddSupplierRequest.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAgwCkAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T18:13:38.903Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T18:13:38.903Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 26,
               "Title": "SupplierOffers.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Entities\\SupplierOffers.cs",
               "RelativeDocumentMoniker": "..\\optimum.data\\Entities\\SupplierOffers.cs",
@@ -525,12 +637,11 @@
               "RelativeToolTip": "..\\optimum.data\\Entities\\SupplierOffers.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T18:06:42.438Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T18:06:42.438Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 27,
               "Title": "SupplierOfferItems.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Entities\\SupplierOfferItems.cs",
               "RelativeDocumentMoniker": "..\\optimum.data\\Entities\\SupplierOfferItems.cs",
@@ -538,12 +649,11 @@
               "RelativeToolTip": "..\\optimum.data\\Entities\\SupplierOfferItems.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T18:12:06.755Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T18:12:06.755Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 28,
               "Title": "SupplierRequestStatus.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Enum\\SupplierRequestStatus.cs",
               "RelativeDocumentMoniker": "..\\optimum.data\\Enum\\SupplierRequestStatus.cs",
@@ -551,12 +661,11 @@
               "RelativeToolTip": "..\\optimum.data\\Enum\\SupplierRequestStatus.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T18:01:05.924Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T18:01:05.924Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 72,
               "Title": "20251127232209_makeNotesNullableInSchoolConfirm.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Migrations\\20251127232209_makeNotesNullableInSchoolConfirm.cs",
               "RelativeDocumentMoniker": "..\\optimum.data\\Migrations\\20251127232209_makeNotesNullableInSchoolConfirm.cs",
@@ -568,7 +677,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 73,
               "Title": "20251127231809_updateConfirmSchoolOrder.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Migrations\\20251127231809_updateConfirmSchoolOrder.cs",
               "RelativeDocumentMoniker": "..\\optimum.data\\Migrations\\20251127231809_updateConfirmSchoolOrder.cs",
@@ -580,7 +689,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 29,
               "Title": "UpdateConfirmedItemDto.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\ConfirmParsedItemsRequest\\Dtos\\UpdateConfirmedItemDto.cs",
               "RelativeDocumentMoniker": "..\\optimum.service\\ConfirmParsedItemsRequest\\Dtos\\UpdateConfirmedItemDto.cs",
@@ -592,7 +701,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 30,
               "Title": "SchoolConfirmedItemDto.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\ConfirmParsedItemsRequest\\Dtos\\SchoolConfirmedItemDto.cs",
               "RelativeDocumentMoniker": "..\\optimum.service\\ConfirmParsedItemsRequest\\Dtos\\SchoolConfirmedItemDto.cs",
@@ -604,7 +713,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 31,
               "Title": "ITextRequestParserService.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\TextRequestsParser\\ITextRequestParserService.cs",
               "RelativeDocumentMoniker": "..\\optimum.service\\TextRequestsParser\\ITextRequestParserService.cs",
@@ -616,7 +725,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 32,
               "Title": "AIParsedRequestItems.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Entities\\AIParsedRequestItems.cs",
               "RelativeDocumentMoniker": "..\\optimum.data\\Entities\\AIParsedRequestItems.cs",
@@ -628,7 +737,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 33,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
@@ -640,7 +749,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 35,
               "Title": "RequestTypeEnum.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.data\\Enum\\RequestTypeEnum.cs",
               "RelativeDocumentMoniker": "..\\optimum.data\\Enum\\RequestTypeEnum.cs",
@@ -652,7 +761,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 34,
               "Title": "TextRequestParserService.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\TextRequestsParser\\TextRequestParserService.cs",
               "RelativeDocumentMoniker": "..\\optimum.service\\TextRequestsParser\\TextRequestParserService.cs",
@@ -664,7 +773,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 41,
               "Title": "CreateSchoolRequestVoiceDto.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.service\\SchoolRequest\\Dtos\\CreateSchoolRequestVoiceDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.service\\SchoolRequest\\Dtos\\CreateSchoolRequestVoiceDto.cs",
@@ -676,19 +785,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-23T17:08:32.79Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 38,
               "Title": "optimum.repository.csproj",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.repository\\optimum.repository.csproj",
               "RelativeDocumentMoniker": "..\\optimum.repository\\optimum.repository.csproj",
@@ -700,7 +797,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 37,
               "Title": "optimum.service.csproj",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\optimum.service.csproj",
               "RelativeDocumentMoniker": "..\\optimum.service\\optimum.service.csproj",
@@ -712,7 +809,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 36,
               "Title": "AiParsedItemDto.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum.service\\TextRequestsParser\\Dtos\\AiParsedItemDto.cs",
               "RelativeDocumentMoniker": "..\\optimum.service\\TextRequestsParser\\Dtos\\AiParsedItemDto.cs",
@@ -724,7 +821,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 42,
               "Title": "CreateSchoolRequestFileDto.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.service\\SchoolRequest\\Dtos\\CreateSchoolRequestFileDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.service\\SchoolRequest\\Dtos\\CreateSchoolRequestFileDto.cs",
@@ -736,7 +833,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 43,
               "Title": "CreateSchoolRequestDto.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.service\\SchoolRequest\\Dtos\\CreateSchoolRequestDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.service\\SchoolRequest\\Dtos\\CreateSchoolRequestDto.cs",
@@ -748,7 +845,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 44,
               "Title": "SchoolRequestItemDto.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.service\\SchoolRequest\\Dtos\\SchoolRequestItemDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.service\\SchoolRequest\\Dtos\\SchoolRequestItemDto.cs",
@@ -760,7 +857,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 45,
               "Title": "RequestTypeEnum.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.data\\Enum\\RequestTypeEnum.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.data\\Enum\\RequestTypeEnum.cs",
@@ -772,7 +869,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 46,
               "Title": "SupplierOfferItems.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.data\\Entities\\SupplierOfferItems.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.data\\Entities\\SupplierOfferItems.cs",
@@ -784,7 +881,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 47,
               "Title": "SupplierOffers.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.data\\Entities\\SupplierOffers.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.data\\Entities\\SupplierOffers.cs",
@@ -796,7 +893,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 48,
               "Title": "SchoolConfirmedRequestItems.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.data\\Entities\\SchoolConfirmedRequestItems.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.data\\Entities\\SchoolConfirmedRequestItems.cs",
@@ -808,7 +905,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 49,
               "Title": "SchoolRequestItems.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.data\\Entities\\SchoolRequestItems.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.data\\Entities\\SchoolRequestItems.cs",
@@ -820,7 +917,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 50,
               "Title": "SchoolRequests.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.data\\Entities\\SchoolRequests.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.data\\Entities\\SchoolRequests.cs",
@@ -832,7 +929,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 51,
               "Title": "School.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.data\\Entities\\School.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.data\\Entities\\School.cs",
@@ -844,7 +941,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 52,
               "Title": "OptimumDbContext.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.data\\Context\\OptimumDbContext.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.data\\Context\\OptimumDbContext.cs",
@@ -856,7 +953,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 53,
               "Title": "AIParsedRequestItems.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.data\\Entities\\AIParsedRequestItems.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.data\\Entities\\AIParsedRequestItems.cs",
@@ -868,7 +965,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 54,
               "Title": "Suppliers.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.data\\Entities\\Suppliers.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.data\\Entities\\Suppliers.cs",
@@ -880,7 +977,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 55,
               "Title": "SupplierProducts.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.data\\Entities\\SupplierProducts.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.data\\Entities\\SupplierProducts.cs",
@@ -892,7 +989,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 56,
               "Title": "Products.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.data\\Entities\\Products.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.data\\Entities\\Products.cs",
@@ -904,7 +1001,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 57,
               "Title": "optimum.service.csproj",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.service\\optimum.service.csproj",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.service\\optimum.service.csproj",
@@ -916,7 +1013,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 58,
               "Title": "SchoolService.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.service\\Schools\\SchoolService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.service\\Schools\\SchoolService.cs",
@@ -928,7 +1025,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 59,
               "Title": "ISchoolService.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.service\\Schools\\ISchoolService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.service\\Schools\\ISchoolService.cs",
@@ -940,7 +1037,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 60,
               "Title": "20251121173624_add-school.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.data\\Migrations\\20251121173624_add-school.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.data\\Migrations\\20251121173624_add-school.cs",
@@ -952,19 +1049,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
-              "ToolTip": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAuwBwAAABKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-23T17:08:32.786Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 61,
               "Title": "GenericRepository.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.repository\\Repositories\\GenericRepository.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.repository\\Repositories\\GenericRepository.cs",
@@ -976,7 +1061,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 62,
               "Title": "CreateSchoolDto.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.service\\Schools\\Dtos\\CreateSchoolDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.service\\Schools\\Dtos\\CreateSchoolDto.cs",
@@ -988,7 +1073,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 63,
               "Title": "RegisterSchoolDto.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.service\\Schools\\Dtos\\RegisterSchoolDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.service\\Schools\\Dtos\\RegisterSchoolDto.cs",
@@ -1000,7 +1085,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 39,
               "Title": "optimum.csproj",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend-master\\opt-backend-master\\optimum\\optimum.csproj",
               "RelativeDocumentMoniker": "optimum.csproj",
@@ -1012,7 +1097,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 64,
               "Title": "IGenericRepository.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.repository\\Interfaces\\IGenericRepository.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.repository\\Interfaces\\IGenericRepository.cs",
@@ -1024,7 +1109,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 40,
               "Title": "20251121162800_buildDatabase.cs",
               "DocumentMoniker": "C:\\Users\\pc\\faculty\\my-work\\optimum\\Backend\\optimum.data\\Migrations\\20251121162800_buildDatabase.cs",
               "ToolTip": "C:\\Users\\pc\\faculty\\my-work\\optimum\\Backend\\optimum.data\\Migrations\\20251121162800_buildDatabase.cs",
@@ -1034,7 +1119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 65,
               "Title": "JwtTokenService.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.service\\Authentication\\JwtTokenService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.service\\Authentication\\JwtTokenService.cs",
@@ -1046,7 +1131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 66,
               "Title": "IJwtTokenService.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.service\\Authentication\\IJwtTokenService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.service\\Authentication\\IJwtTokenService.cs",
@@ -1058,7 +1143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 67,
               "Title": "AuthDto.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.service\\Authentication\\Dtos\\AuthDto.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.service\\Authentication\\Dtos\\AuthDto.cs",
@@ -1070,7 +1155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 68,
               "Title": "UnitOfWork.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.repository\\Repositories\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.repository\\Repositories\\UnitOfWork.cs",
@@ -1082,7 +1167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 69,
               "Title": "IUnitOfWork.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.repository\\Interfaces\\IUnitOfWork.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.repository\\Interfaces\\IUnitOfWork.cs",
@@ -1094,7 +1179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 70,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.data\\Entities\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.data\\Entities\\ApplicationUser.cs",
@@ -1106,7 +1191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 71,
               "Title": "BaseEntity.cs",
               "DocumentMoniker": "E:\\ME\\backend\\opt-backend\\opt-backend\\optimum.data\\Entities\\BaseEntity.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\opt-backend\\opt-backend\\optimum.data\\Entities\\BaseEntity.cs",

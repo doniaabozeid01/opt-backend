@@ -487,3 +487,4 @@ E:\ME\backend\opt-backend-master\opt-backend-master\optimum\obj\Debug\net8.0\ref
 E:\ME\backend\opt-backend-master\opt-backend-master\optimum\obj\Debug\net8.0\optimum.pdb
 E:\ME\backend\opt-backend-master\opt-backend-master\optimum\obj\Debug\net8.0\optimum.genruntimeconfig.cache
 E:\ME\backend\opt-backend-master\opt-backend-master\optimum\obj\Debug\net8.0\ref\optimum.dll
+E:\ME\backend\opt-backend-master\opt-backend-master\optimum\obj\Debug\net8.0\optimum.sourcelink.json

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using optimum.service.Supplier.Dtos;
 using optimum.service.Supplier;
+using optimum.service.Schools.Dtos;
 
 namespace optimum.Controllers
 {
@@ -70,5 +71,41 @@ namespace optimum.Controllers
 
             return NoContent();
         }
+
+
+
+
+
+
+
+        [HttpPost("register")]
+        public async Task<IActionResult> Register([FromBody] RegisterSupplierDto dto)
+        {
+            try
+            {
+                var (supplier, token) = await _suppliersService.RegisterSupplierAsync(dto);
+                return Ok(new
+                {
+                    Message = "Registration successful",
+                    Token = token,
+                    UserId = supplier.UserId,
+                    SchoolId = supplier.Id,
+                    SchoolName = supplier.FullName,
+                    SchoolCode = supplier.Code
+                });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { Message = ex.Message });
+            }
+        }
+
+
+
+
+
+
+
+
     }
 }

@@ -45,3 +45,4 @@ E:\ME\backend\opt-backend-master\opt-backend-master\optimum.repository\obj\Debug
 E:\ME\backend\opt-backend-master\opt-backend-master\optimum.repository\obj\Debug\net8.0\refint\optimum.repository.dll
 E:\ME\backend\opt-backend-master\opt-backend-master\optimum.repository\obj\Debug\net8.0\optimum.repository.pdb
 E:\ME\backend\opt-backend-master\opt-backend-master\optimum.repository\obj\Debug\net8.0\ref\optimum.repository.dll
+E:\ME\backend\opt-backend-master\opt-backend-master\optimum.repository\obj\Debug\net8.0\optimum.repository.sourcelink.json

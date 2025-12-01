@@ -51,3 +51,4 @@ E:\ME\backend\opt-backend-master\opt-backend-master\optimum.service\obj\Debug\ne
 E:\ME\backend\opt-backend-master\opt-backend-master\optimum.service\obj\Debug\net8.0\refint\optimum.service.dll
 E:\ME\backend\opt-backend-master\opt-backend-master\optimum.service\obj\Debug\net8.0\optimum.service.pdb
 E:\ME\backend\opt-backend-master\opt-backend-master\optimum.service\obj\Debug\net8.0\ref\optimum.service.dll
+E:\ME\backend\opt-backend-master\opt-backend-master\optimum.service\obj\Debug\net8.0\optimum.service.sourcelink.json
