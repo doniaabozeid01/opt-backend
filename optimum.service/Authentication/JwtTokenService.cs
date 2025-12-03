@@ -55,6 +55,46 @@ namespace optimum.service.Authentication
         }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public string? ValidateEmail(string email)
+        {
+            if (email.Contains(' '))
+                return "The email format shouldn't have any spaces.";
+
+            if (!email.Contains('@'))
+                return "The email format is invalid.";
+
+            var domain = email.Split('@').Last();
+
+            if (domain != domain.ToLower())
+                return "Invalid email format. The domain must be in lowercase.";
+
+            if (!email.EndsWith("@gmail.com"))
+                return "Only Gmail accounts are allowed.";
+
+            return null; // يعني الإيميل سليم
+        }
+
     }
 
 }

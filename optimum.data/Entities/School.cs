@@ -14,6 +14,11 @@ namespace optimum.data.Entities
 
         public string UserId { get; set; }         // FK
         public ApplicationUser User { get; set; }  // Navigation
+        public string ResponsiblePerson { get; set; } // الشخص المسؤول
+        public string Phone { get; set; }             // رقم الهاتف
+        public string Address { get; set; }           // العنوان
+        //public string ContactEmail { get; set; }
+
     }
 
 }

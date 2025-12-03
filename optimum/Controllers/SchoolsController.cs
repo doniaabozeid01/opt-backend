@@ -101,12 +101,68 @@ namespace optimum.Controllers
 
 
 
+        //[HttpPost("register")]
+        //public async Task<IActionResult> Register([FromBody] RegisterSchoolDto dto)
+        //{
+        //    try
+        //    {
+        //        var (school, token) = await _schoolService.RegisterSchoolAsync(dto);
+        //        return Ok(new
+        //        {
+        //            Message = "Registration successful",
+        //            Token = token,
+        //            UserId = school.UserId,
+        //            SchoolId = school.Id,
+        //            SchoolName = school.FullName,
+        //            SchoolCode = school.Code
+        //        });
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return BadRequest(new { Message = ex.Message });
+        //    }
+        //}
+
+
+
+
+
+
+
+
+
+
+
+
+
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterSchoolDto dto)
         {
             try
             {
-                var (school, token) = await _schoolService.RegisterSchoolAsync(dto);
+                // ✅ نفس تعاليم UserRegister / SupplierRegister
+                var emailError = _jwtTokenService.ValidateEmail(dto.Email);
+                if (emailError != null)
+                    return BadRequest(emailError);
+
+                var (school, token, identityResult) = await _schoolService.RegisterSchoolAsync(dto);
+
+                if (!identityResult.Succeeded)
+                {
+                    if (identityResult.Errors.Any(e => e.Code == "DuplicateUserName" || e.Code == "DuplicateEmail"))
+                        return BadRequest("This email is already exist.");
+                    else if (identityResult.Errors.Any(e => e.Code == "PasswordTooWeak"))
+                        return BadRequest("Password is too weak.");
+                    else if (identityResult.Errors.Any(e => e.Code == "InvalidEmail"))
+                        return BadRequest("The email format is invalid.");
+                    else
+                        return BadRequest(new
+                        {
+                            Message = "Registration failed",
+                            Errors = identityResult.Errors.Select(e => e.Description)
+                        });
+                }
+
                 return Ok(new
                 {
                     Message = "Registration successful",
@@ -122,6 +178,19 @@ namespace optimum.Controllers
                 return BadRequest(new { Message = ex.Message });
             }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 }

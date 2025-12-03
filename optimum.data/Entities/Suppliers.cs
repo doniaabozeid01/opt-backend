@@ -18,6 +18,8 @@ namespace optimum.data.Entities
         public string ContactEmail { get; set; }
         public string Phone { get; set; }
         public DateOnly CreatedAt { get; set; }
+        public ICollection<SupplierProducts> SupplierProducts { get; set; }
+
 
     }
 }

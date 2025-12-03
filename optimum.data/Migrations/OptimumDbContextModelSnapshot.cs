@@ -295,11 +295,23 @@ namespace optimum.data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Code")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ResponsiblePerson")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -817,7 +829,7 @@ namespace optimum.data.Migrations
                         .IsRequired();
 
                     b.HasOne("optimum.data.Entities.Suppliers", "Suppliers")
-                        .WithMany()
+                        .WithMany("SupplierProducts")
                         .HasForeignKey("SuppliersId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -898,6 +910,11 @@ namespace optimum.data.Migrations
                 {
                     b.Navigation("Offer")
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("optimum.data.Entities.Suppliers", b =>
+                {
+                    b.Navigation("SupplierProducts");
                 });
 #pragma warning restore 612, 618
         }

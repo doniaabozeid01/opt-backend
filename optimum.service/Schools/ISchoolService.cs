@@ -1,4 +1,5 @@
-﻿using optimum.data.Entities;
+﻿using Microsoft.AspNetCore.Identity;
+using optimum.data.Entities;
 using optimum.service.Schools.Dtos;
 using System;
 using System.Collections.Generic;
@@ -17,8 +18,8 @@ namespace optimum.service.Schools
         //Task<School> RegisterWithSchoolAsync(RegisterSchoolDto dto, CancellationToken cancellationToken = default);
 
 
-        Task<(School school, string token)> RegisterSchoolAsync(RegisterSchoolDto dto);
-
+        //Task<(School school, string token)> RegisterSchoolAsync(RegisterSchoolDto dto);
+        Task<(School school, string token, IdentityResult identityResult)> RegisterSchoolAsync(RegisterSchoolDto dto);
 
     }
 }

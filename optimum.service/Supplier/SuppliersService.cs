@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
+using optimum.data.Context;
 using optimum.data.Entities;
 using optimum.repository.Interfaces;
 using optimum.service.Authentication;
@@ -19,10 +20,12 @@ namespace optimum.service.Supplier
         private readonly IGenericRepository<Suppliers> _repository;
         private readonly IJwtTokenService _jwtTokenService;
         private readonly RoleManager<IdentityRole> _roleManager;
+        readonly OptimumDbContext _context;
 
-        public SuppliersService(IUnitOfWork unitOfWork,IGenericRepository<Suppliers> repository, RoleManager<IdentityRole> roleManager,
+        public SuppliersService(OptimumDbContext context,IUnitOfWork unitOfWork,IGenericRepository<Suppliers> repository, RoleManager<IdentityRole> roleManager,
                     UserManager<ApplicationUser> userManager, IJwtTokenService jwtTokenService)
         {
+            _context = context;
             _unitOfWork = unitOfWork;
             _userManager = userManager;
             _jwtTokenService = jwtTokenService;
@@ -146,58 +149,252 @@ namespace optimum.service.Supplier
 
 
 
-        public async Task<(Suppliers supplier, string token)> RegisterSupplierAsync(RegisterSupplierDto dto)
+        //public async Task<(Suppliers supplier, string token)> RegisterSupplierAsync(RegisterSupplierDto dto)
+        //{
+        //    // ======= Email Validation =======
+        //    var email = dto.Email;
+        //    if (email.Contains(' '))
+        //        throw new Exception("The email format shouldn't have any spaces.");
+        //    if (!email.Contains('@'))
+        //        throw new Exception("The email format is invalid.");
+        //    var domain = email.Split('@').Last();
+        //    if (domain != domain.ToLower())
+        //        throw new Exception("Invalid email format. The domain must be in lowercase.");
+        //    if (!email.EndsWith("@gmail.com"))
+        //        throw new Exception("Only Gmail accounts are allowed.");
+
+        //    // ======= Create Identity User =======
+        //    var user = new ApplicationUser
+        //    {
+        //        UserName = dto.Email.Split('@')[0],
+        //        Email = dto.Email
+        //    };
+
+        //    var result = await _userManager.CreateAsync(user, dto.Password);
+        //    if (!result.Succeeded)
+        //    {
+        //        var errors = string.Join(" | ", result.Errors.Select(e => e.Description));
+        //        throw new Exception(errors);
+        //    }
+
+        //    // ======= Assign Role Client =======
+        //    var role = "Supplier";
+        //    if (!await _roleManager.RoleExistsAsync(role))
+        //    {
+        //        await _roleManager.CreateAsync(new IdentityRole(role));
+        //    }
+
+        //    await _userManager.AddToRoleAsync(user, role);
+
+        //    // ======= Create School =======
+        //    var supplier = new Suppliers
+        //    {
+        //        FullName = dto.FullName,
+        //        Code = dto.Code,
+        //        UserId = user.Id
+        //    };
+        //    await _repository.AddAsync(supplier);
+        //    await _unitOfWork.CompleteAsync();
+
+        //    // ======= Generate Token =======
+        //    var token = _jwtTokenService.GenerateJwtToken(user);
+
+        //    return (supplier, token);
+        //}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //public async Task<(Suppliers supplier, string token)> RegisterSupplierAsync(RegisterSupplierDto dto)
+        //{
+        //    // نستخدم Transaction عشان لو حاجة وقعت.. كله يترجع
+        //    using var trx = await _context.Database.BeginTransactionAsync();
+
+        //    try
+        //    {
+        //        // 1) إنشاء الـ Identity User (Email + Password فقط)
+        //        var existingUser = await _userManager.FindByEmailAsync(dto.Email);
+        //        if (existingUser != null)
+        //            throw new Exception("Email already exists");
+
+        //        var user = new ApplicationUser
+        //        {
+        //            UserName = dto.Email,
+        //            Email = dto.Email
+        //        };
+
+        //        var createUserResult = await _userManager.CreateAsync(user, dto.Password);
+
+        //        if (!createUserResult.Succeeded)
+        //        {
+        //            var errors = string.Join(", ", createUserResult.Errors.Select(e => e.Description));
+        //            throw new Exception($"Failed to create user: {errors}");
+        //        }
+
+        //        // ممكن تضيفيه في Role "Supplier"
+        //        // await _userManager.AddToRoleAsync(user, "Supplier");
+
+        //        // 2) إنشاء سجل المورد في جدول Suppliers
+        //        var supplier = new Suppliers
+        //        {
+        //            FullName = dto.FullName,
+        //            Code = dto.Code,
+        //            UserId = user.Id,
+        //            ResponsiblePerson = dto.ResponsiblePerson,
+        //            ContactEmail = dto.Email,
+        //            Phone = dto.Phone,
+        //            CreatedAt = DateOnly.FromDateTime(DateTime.UtcNow),
+        //            SupplierProducts = new List<SupplierProducts>()
+        //        };
+
+        //        _context.Suppliers.Add(supplier);
+        //        await _context.SaveChangesAsync(); // عشان الـ Id يتولد
+
+        //        // 3) حفظ المنتجات اللي اختارها المورد في SupplierProducts
+        //        if (dto.Products != null && dto.Products.Any())
+        //        {
+        //            foreach (var p in dto.Products)
+        //            {
+        //                var sp = new SupplierProducts
+        //                {
+        //                    SuppliersId = supplier.Id,
+        //                    ProductsId = p.ProductId,
+        //                    Price = p.Price,
+        //                    Notes = p.Notes,
+        //                    CreatedAt = DateOnly.FromDateTime(DateTime.UtcNow)
+        //                };
+
+        //                _context.SupplierProducts.Add(sp);
+        //            }
+
+        //            await _context.SaveChangesAsync();
+        //        }
+
+        //        // 4) إنشاء Token للمورد الجديد
+        //        var token = _jwtTokenService.GenerateJwtToken(user);
+
+        //        await trx.CommitAsync();
+
+        //        return (supplier, token);
+        //    }
+        //    catch
+        //    {
+        //        await trx.RollbackAsync();
+        //        throw;
+        //    }
+        //}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public async Task<(Suppliers supplier, string token, IdentityResult identityResult)>
+    RegisterSupplierAsync(RegisterSupplierDto dto)
         {
-            // ======= Email Validation =======
-            var email = dto.Email;
-            if (email.Contains(' '))
-                throw new Exception("The email format shouldn't have any spaces.");
-            if (!email.Contains('@'))
-                throw new Exception("The email format is invalid.");
-            var domain = email.Split('@').Last();
-            if (domain != domain.ToLower())
-                throw new Exception("Invalid email format. The domain must be in lowercase.");
-            if (!email.EndsWith("@gmail.com"))
-                throw new Exception("Only Gmail accounts are allowed.");
+            using var trx = await _context.Database.BeginTransactionAsync();
 
-            // ======= Create Identity User =======
-            var user = new ApplicationUser
+            try
             {
-                UserName = dto.Email.Split('@')[0],
-                Email = dto.Email
-            };
+                // 1) إنشاء Identity User
+                var user = new ApplicationUser
+                {
+                    UserName = dto.Email.Split('@')[0],
+                    Email = dto.Email
+                };
 
-            var result = await _userManager.CreateAsync(user, dto.Password);
-            if (!result.Succeeded)
-            {
-                var errors = string.Join(" | ", result.Errors.Select(e => e.Description));
-                throw new Exception(errors);
+                var result = await _userManager.CreateAsync(user, dto.Password);
+
+                if (!result.Succeeded)
+                {
+                    // نرجّع النتيجة للأكشن يتصرف فيها
+                    return (null, null, result);
+                }
+
+                // ممكن تضيفيه في Role Supplier
+                var role = "Supplier";
+                if (!await _roleManager.RoleExistsAsync(role))
+                    await _roleManager.CreateAsync(new IdentityRole(role));
+
+                await _userManager.AddToRoleAsync(user, role);
+
+                // 2) إنشاء Supplier
+                var supplier = new Suppliers
+                {
+                    FullName = dto.FullName,
+                    Code = dto.Code,
+                    UserId = user.Id,
+                    ResponsiblePerson = dto.ResponsiblePerson,
+                    ContactEmail = dto.Email,
+                    Phone = dto.Phone,
+                    CreatedAt = DateOnly.FromDateTime(DateTime.UtcNow)
+                };
+
+                _context.Suppliers.Add(supplier);
+                await _context.SaveChangesAsync();
+
+                // 3) المنتجات
+                if (dto.Products != null && dto.Products.Any())
+                {
+                    foreach (var p in dto.Products)
+                    {
+                        var sp = new SupplierProducts
+                        {
+                            SuppliersId = supplier.Id,
+                            ProductsId = p.ProductId,
+                            Price = p.Price,
+                            Notes = p.Notes,
+                            CreatedAt = DateOnly.FromDateTime(DateTime.UtcNow)
+                        };
+
+                        _context.SupplierProducts.Add(sp);
+                    }
+
+                    await _context.SaveChangesAsync();
+                }
+
+                // 4) التوكن
+                var token = _jwtTokenService.GenerateJwtToken(user);
+
+                await trx.CommitAsync();
+
+                return (supplier, token, result);
             }
-
-            // ======= Assign Role Client =======
-            var role = "Supplier";
-            if (!await _roleManager.RoleExistsAsync(role))
+            catch
             {
-                await _roleManager.CreateAsync(new IdentityRole(role));
+                await trx.RollbackAsync();
+                throw;
             }
-
-            await _userManager.AddToRoleAsync(user, role);
-
-            // ======= Create School =======
-            var supplier = new Suppliers
-            {
-                FullName = dto.FullName,
-                Code = dto.Code,
-                UserId = user.Id
-            };
-            await _repository.AddAsync(supplier);
-            await _unitOfWork.CompleteAsync();
-
-            // ======= Generate Token =======
-            var token = _jwtTokenService.GenerateJwtToken(user);
-
-            return (supplier, token);
         }
+
+
+
+
 
 
 

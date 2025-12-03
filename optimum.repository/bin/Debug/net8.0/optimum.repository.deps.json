@@ -638,10 +638,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.22"
         },
         "runtime": {
-          "optimum.data.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "optimum.data.dll": {}
         }
       }
     }

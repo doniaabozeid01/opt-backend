@@ -10,6 +10,8 @@ namespace optimum.service.Authentication
     public interface IJwtTokenService
     {
         string GenerateJwtToken(ApplicationUser user);
+        string? ValidateEmail(string email);
+
 
     }
 }

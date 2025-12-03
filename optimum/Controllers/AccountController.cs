@@ -127,8 +127,9 @@ namespace optimum.Controllers
                     Token = token,
                     UserId = user.Id,
                     Email = user.Email,
-                    Role = _roleManager.FindByIdAsync(user.Id),
-                });
+                    //Role = _roleManager.FindByIdAsync(user.Id),
+                    roles = await _userManager.GetRolesAsync(user)
+            });
             }
 
             return Unauthorized(new { Message = "Invalid email or password" });

@@ -16,8 +16,5 @@ namespace optimum.service.Supplier.Dtos
         public string ResponsiblePerson { get; set; }
         public string ContactEmail { get; set; }
         public string Phone { get; set; }
-
-
-
     }
 }

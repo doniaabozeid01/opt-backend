@@ -1,12 +1,11 @@
 {
   "Version": 1,
-  "Hash": "yBQyayNfRTOxeHbI9w+Awp/W0vpS716XPCC9On0G4J8=",
+  "Hash": "X6jg+V+HwZlsV3E2zRCeZ4Xfj2JAovXQ29tIee2bZwg=",
   "Source": "optimum",
   "BasePath": "_content/optimum",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": []
 }
