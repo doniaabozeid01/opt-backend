@@ -9,20 +9,13 @@ namespace optimum.data.Entities
     public class SupplierOfferItems : BaseEntity
     {
         public int Id { get; set; }
-
         public int SupplierOfferId { get; set; }
         public SupplierOffers SupplierOffer { get; set; }
-
-
         public int ProductId { get; set; }
         public Products Product { get; set; }
-
         public string ProductName { get; set; }
-
         public int Quantity { get; set; }
-
         public decimal UnitPrice { get; set; }
-
         public decimal TotalPrice => Quantity * UnitPrice;
     }
 
