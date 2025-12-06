@@ -29,6 +29,8 @@ namespace optimum.data.Entities
 
         // ممكن supplier يعمل أكتر من عرض على نفس الطلب (لو حابة تسمحي بده)
         //public ICollection<SupplierOffers> Offers { get; set; }
+        public ICollection<SupplierRequestItem> Items { get; set; } = new List<SupplierRequestItem>();
+
     }
 
 

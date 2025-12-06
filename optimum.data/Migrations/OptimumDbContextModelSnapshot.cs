@@ -545,6 +545,44 @@ namespace optimum.data.Migrations
                     b.ToTable("SupplierProducts");
                 });
 
+            modelBuilder.Entity("optimum.data.Entities.SupplierRating", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Comment")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("Score")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("SupplierId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("SupplierOfferId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("SupplierRequestId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SupplierId");
+
+                    b.HasIndex("SupplierOfferId");
+
+                    b.HasIndex("SupplierRequestId");
+
+                    b.ToTable("SupplierRating");
+                });
+
             modelBuilder.Entity("optimum.data.Entities.SupplierRequest", b =>
                 {
                     b.Property<int>("Id")
@@ -630,6 +668,9 @@ namespace optimum.data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<decimal?>("AverageRating")
+                        .HasColumnType("decimal(18,2)");
+
                     b.Property<string>("Code")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -648,6 +689,9 @@ namespace optimum.data.Migrations
                     b.Property<string>("Phone")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("RatingCount")
+                        .HasColumnType("int");
 
                     b.Property<string>("ResponsiblePerson")
                         .IsRequired()
@@ -839,6 +883,29 @@ namespace optimum.data.Migrations
                     b.Navigation("Suppliers");
                 });
 
+            modelBuilder.Entity("optimum.data.Entities.SupplierRating", b =>
+                {
+                    b.HasOne("optimum.data.Entities.Suppliers", "Supplier")
+                        .WithMany("Ratings")
+                        .HasForeignKey("SupplierId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("optimum.data.Entities.SupplierOffers", "SupplierOffer")
+                        .WithMany()
+                        .HasForeignKey("SupplierOfferId");
+
+                    b.HasOne("optimum.data.Entities.SupplierRequest", "SupplierRequest")
+                        .WithMany()
+                        .HasForeignKey("SupplierRequestId");
+
+                    b.Navigation("Supplier");
+
+                    b.Navigation("SupplierOffer");
+
+                    b.Navigation("SupplierRequest");
+                });
+
             modelBuilder.Entity("optimum.data.Entities.SupplierRequest", b =>
                 {
                     b.HasOne("optimum.data.Entities.SchoolRequests", "SchoolRequest")
@@ -873,7 +940,7 @@ namespace optimum.data.Migrations
                         .IsRequired();
 
                     b.HasOne("optimum.data.Entities.SupplierRequest", "SupplierRequest")
-                        .WithMany()
+                        .WithMany("Items")
                         .HasForeignKey("SupplierRequestId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -908,12 +975,16 @@ namespace optimum.data.Migrations
 
             modelBuilder.Entity("optimum.data.Entities.SupplierRequest", b =>
                 {
+                    b.Navigation("Items");
+
                     b.Navigation("Offer")
                         .IsRequired();
                 });
 
             modelBuilder.Entity("optimum.data.Entities.Suppliers", b =>
                 {
+                    b.Navigation("Ratings");
+
                     b.Navigation("SupplierProducts");
                 });
 #pragma warning restore 612, 618

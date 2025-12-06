@@ -13,10 +13,13 @@ namespace optimum.repository.Repositories
     public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : BaseEntity
     {
         private readonly OptimumDbContext _context;
+        private readonly DbSet<TEntity> _dbSet;
+
 
         public GenericRepository(OptimumDbContext context)
         {
-            _context = context;
+            _context = context ?? throw new ArgumentNullException(nameof(context));
+            _dbSet = _context.Set<TEntity>();
         }
 
         public async Task AddAsync(TEntity entity)
@@ -72,6 +75,13 @@ namespace optimum.repository.Repositories
             return await _context.School.FindAsync(new object[] { id }, cancellationToken);
         }
 
+
+
+
+        public IQueryable<TEntity> GetTable()
+        {
+            return _dbSet.AsQueryable();
+        }
 
 
     }

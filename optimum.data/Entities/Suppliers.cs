@@ -19,7 +19,11 @@ namespace optimum.data.Entities
         public string Phone { get; set; }
         public DateOnly CreatedAt { get; set; }
         public ICollection<SupplierProducts> SupplierProducts { get; set; }
+        // 🔹 تقييم عام للمورّد (0–10)
+        public decimal? AverageRating { get; set; } = 0;     // مثال: 8.5
+        public int RatingCount { get; set; } = 0;          // كام تقييم اتجمع
 
+        public ICollection<SupplierRating> Ratings { get; set; }
 
     }
 }

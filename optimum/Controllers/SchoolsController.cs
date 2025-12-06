@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Identity;
 using optimum.data.Entities;
 using optimum.service.Authentication.Dtos;
 using optimum.service.Authentication;
+using optimum.service.SupplierRate.Dtos;
+using optimum.service.SupplierRate;
+using optimum.service.SupplierRate;
 
 namespace optimum.Controllers
 {
@@ -19,9 +22,11 @@ namespace optimum.Controllers
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IJwtTokenService _jwtTokenService;
+        readonly IRatingSupplierService _ratingSupplierService;
 
-        public SchoolsController(ISchoolService schoolService, ILogger<SchoolsController> logger, UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, RoleManager<IdentityRole> roleManager, IJwtTokenService jwtTokenService)
+        public SchoolsController(ISchoolService schoolService,IRatingSupplierService ratingSupplierService , ILogger<SchoolsController> logger, UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, RoleManager<IdentityRole> roleManager, IJwtTokenService jwtTokenService)
         {
+            _ratingSupplierService = ratingSupplierService;
             _userManager = userManager;
             _signInManager = signInManager;
             _roleManager = roleManager;
@@ -179,6 +184,15 @@ namespace optimum.Controllers
             }
         }
 
+
+
+
+        [HttpPost("rate-supplier")]
+        public async Task<IActionResult> RateSupplier([FromBody] SupplierRatingCreateDto dto)
+        {
+            await _ratingSupplierService.RateSupplierAsync(dto);
+            return Ok();
+        }
 
 
 

@@ -139,7 +139,7 @@ namespace optimum.Controllers
                 var confirmItem = new SchoolConfirmedRequestItems
                 {
                     SchoolRequestId = ai.SchoolRequestId,
-                    ProductId = ai.ProductId ?? 0,                      // اقتراح الـ AI إن وجد
+                    ProductId = ai.ProductId ?? 2,                      // اقتراح الـ AI إن وجد
                     ProductName = ai.Product?.Name ?? ai.ExtractedName,
                     Quantity = ai.Quantity,
                     Notes = ai.Notes,

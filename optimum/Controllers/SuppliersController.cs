@@ -4,6 +4,7 @@ using optimum.service.Supplier.Dtos;
 using optimum.service.Supplier;
 using optimum.service.Schools.Dtos;
 using optimum.service.Authentication;
+using optimum.service.SupplierRequests;
 
 namespace optimum.Controllers
 {
@@ -13,11 +14,14 @@ namespace optimum.Controllers
     {
         private readonly ISuppliersService _suppliersService;
         readonly IJwtTokenService _jwtTokenService;
+        private readonly ISupplierRequestService _supplierRequestService;
 
-        public SuppliersController(ISuppliersService suppliersService, IJwtTokenService jwtTokenService)
+        public SuppliersController(ISupplierRequestService supplierRequestService,ISuppliersService suppliersService, IJwtTokenService jwtTokenService)
         {
             _jwtTokenService = jwtTokenService;
             _suppliersService = suppliersService;
+            _supplierRequestService = supplierRequestService;
+
         }
 
         // GET: api/Suppliers
@@ -27,6 +31,24 @@ namespace optimum.Controllers
             var suppliers = await _suppliersService.GetAllAsync();
             return Ok(suppliers);
         }
+
+
+
+
+        // GET: api/SupplierRequests/by-supplier/5
+        [HttpGet("by-supplier/{supplierId:int}")]
+        public async Task<IActionResult> GetBySupplier(int supplierId)
+        {
+            var requests = await _supplierRequestService.GetSupplierRequestsAsync(supplierId);
+            return Ok(requests);
+        }
+
+        // لو بعدين هتجيبي الـ supplierId من الـ token:
+        // [HttpGet("my-requests")]
+        // public async Task<IActionResult> GetMyRequests() { ... }
+    
+
+
 
         // GET: api/Suppliers/5
         [HttpGet("GetSupplierById/{id}")]

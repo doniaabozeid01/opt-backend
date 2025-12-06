@@ -23,6 +23,11 @@ namespace optimum.repository.Interfaces
         Task<bool> DeleteAsync(int id, CancellationToken cancellationToken = default);
         Task<School> GetByIdAsync(int id, CancellationToken cancellationToken = default);
 
+
+
+
+        IQueryable<TEntity> GetTable();
+
     }
 
 }
