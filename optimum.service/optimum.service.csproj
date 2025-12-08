@@ -18,8 +18,4 @@
     <ProjectReference Include="..\optimum.repository\optimum.repository.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="SupplierOffers\Dtos\" />
-  </ItemGroup>
-
 </Project>

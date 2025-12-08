@@ -1098,7 +1098,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.22"
         },
         "runtime": {
-          "optimum.data.dll": {}
+          "optimum.data.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "optimum.repository/1.0.0": {
@@ -1106,7 +1109,10 @@
           "optimum.data": "1.0.0"
         },
         "runtime": {
-          "optimum.repository.dll": {}
+          "optimum.repository.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "optimum.service/1.0.0": {
@@ -1119,7 +1125,10 @@
           "optimum.repository": "1.0.0"
         },
         "runtime": {
-          "optimum.service.dll": {}
+          "optimum.service.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

@@ -11,6 +11,7 @@ using optimum.service.Authentication;
 using optimum.service.Product;
 using optimum.service.Schools;
 using optimum.service.Supplier;
+using optimum.service.SupplierOffer;
 using optimum.service.SupplierRate;
 using optimum.service.SupplierRequests;
 using optimum.service.TextRequestsParser;
@@ -85,11 +86,7 @@ namespace optimum
             builder.Services.AddScoped<ISuppliersService, SuppliersService>();
             builder.Services.AddScoped<ISupplierRequestService, SupplierRequestsService>();
             builder.Services.AddScoped<IRatingSupplierService, RatingSupplierService>();
-
-
-
-
-
+            builder.Services.AddScoped<ISupplierOfferService, SupplierOfferService>();
 
 
 

@@ -1,0 +1,17 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build folders
+bin/
+obj/
+
+# Cache
+*.vsidx
+
+# Logs
+*.log
+
+# Publish folder
+publish/

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "woHjk7GzxZoMFlWwkP1fM3W49qMnfnLjTy4pMxONrqPea5oLhfz+gIA5nmoVER7Me1oVseI6RBODZrytky0i+g==",
+  "dgSpecHash": "Fr2FEyjLUW8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\pc\\faculty\\my-work\\optimum\\Backend\\opt-backend\\optimum\\optimum.csproj",
+  "projectFilePath": "E:\\ME\\backend\\opt-backend\\optimum\\optimum.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\automapper\\15.1.0\\automapper.15.1.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",

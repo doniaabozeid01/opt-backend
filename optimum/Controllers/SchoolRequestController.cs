@@ -26,7 +26,7 @@ namespace optimum.Controllers
 
         // POST: api/SchoolRequests
         [HttpPost("CreateByList")]
-        public async Task<IActionResult> Create([FromBody] CreateSchoolRequestDto dto)
+        public async Task<IActionResult> Create ([FromBody] CreateSchoolRequestDto dto)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);

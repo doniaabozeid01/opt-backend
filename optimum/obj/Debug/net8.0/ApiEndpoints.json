@@ -292,6 +292,22 @@
   },
   {
     "ContainingType": "optimum.Controllers.SchoolsController",
+    "Method": "RateSupplier",
+    "RelativePath": "api/Schools/rate-supplier",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "optimum.service.SupplierRate.Dtos.SupplierRatingCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "optimum.Controllers.SchoolsController",
     "Method": "Register",
     "RelativePath": "api/Schools/register",
     "HttpMethod": "POST",
@@ -307,30 +323,83 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "optimum.Controllers.SuppliersController",
-    "Method": "Create",
-    "RelativePath": "api/Suppliers/CreateNewSupplier",
+    "ContainingType": "optimum.Controllers.SupplierOffersController",
+    "Method": "SubmitFileOffer",
+    "RelativePath": "api/SupplierOffers/{supplierRequestId}/file",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
+        "Name": "supplierRequestId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "File",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "optimum.Controllers.SupplierOffersController",
+    "Method": "SubmitFreeTextOffer",
+    "RelativePath": "api/SupplierOffers/{supplierRequestId}/free-text",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "supplierRequestId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
         "Name": "dto",
-        "Type": "optimum.service.Supplier.Dtos.CreateSupplierDto",
+        "Type": "optimum.service.SupplierOffer.Dtos.SupplierFreeTextOfferCreateDto",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "optimum.Controllers.SupplierOffersController",
+    "Method": "SubmitVoiceOffer",
+    "RelativePath": "api/SupplierOffers/{supplierRequestId}/voice",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
       {
-        "Type": "optimum.service.Supplier.Dtos.SupplierDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
+        "Name": "supplierRequestId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "File",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
-    ]
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "optimum.Controllers.SuppliersController",
+    "Method": "GetBySupplier",
+    "RelativePath": "api/Suppliers/by-supplier/{supplierId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "supplierId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "optimum.Controllers.SuppliersController",
@@ -405,27 +474,6 @@
       {
         "Name": "dto",
         "Type": "optimum.service.Supplier.Dtos.RegisterSupplierDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "optimum.Controllers.SuppliersController",
-    "Method": "Update",
-    "RelativePath": "api/Suppliers/UpdateExistingSupplier/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "dto",
-        "Type": "optimum.service.Supplier.Dtos.UpdateSupplierDto",
         "IsRequired": true
       }
     ],

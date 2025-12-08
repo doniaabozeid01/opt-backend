@@ -352,7 +352,9 @@ namespace optimum.service.Supplier
                     ResponsiblePerson = dto.ResponsiblePerson,
                     ContactEmail = dto.Email,
                     Phone = dto.Phone,
-                    CreatedAt = DateOnly.FromDateTime(DateTime.UtcNow)
+                    CreatedAt = DateOnly.FromDateTime(DateTime.UtcNow),
+                    AverageRating = 0,
+                    RatingCount=0
                 };
 
                 _context.Suppliers.Add(supplier);

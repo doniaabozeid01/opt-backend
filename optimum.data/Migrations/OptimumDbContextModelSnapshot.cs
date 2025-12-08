@@ -477,28 +477,52 @@ namespace optimum.data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("DeliveryDays")
+                    b.Property<string>("ContentType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("DeliveryDays")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("FinalPrice")
+                    b.Property<string>("FileName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FilePath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal?>("FinalPrice")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<bool>("IsConfirmedBySupplier")
+                        .HasColumnType("bit");
 
                     b.Property<DateTime>("OfferDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<decimal>("PurchaseCost")
+                    b.Property<int>("OfferType")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("ProfitMarginPercent")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal?>("ProfitMarginValue")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal?>("PurchaseCost")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("QuoteNumber")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Status")
-                        .IsRequired()
+                    b.Property<string>("RawText")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("SupplierConfirmedAt")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("SupplierNotes")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("SupplierRequestId")

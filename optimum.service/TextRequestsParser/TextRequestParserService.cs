@@ -29,8 +29,11 @@ namespace optimum.service.TextRequestsParser
             _config = config;
         }
 
+
+
+
         // ========= ENTRY POINT =========
-        public async Task<List<AIParsedRequestItems>> ParseAsync(SchoolRequests request)
+        public async Task<List<AIParsedRequestItems>> ParseAsync (SchoolRequests request)
         {
             // لو مفيش نص أصلاً، رجّع فاضي
             if (string.IsNullOrWhiteSpace(request.TextContent))
@@ -70,6 +73,72 @@ namespace optimum.service.TextRequestsParser
         }
 
         // ========= 1) المنطق اليدوي (Regex + Keywords) =========
+        //private async Task<List<AIParsedRequestItems>> ParseWithLocalLogicAsync(SchoolRequests request)
+        //{
+        //    var text = NormalizeArabic(request.TextContent ?? "");
+        //    var results = new List<AIParsedRequestItems>();
+
+        //    // 1) Load Products
+        //    var products = await _unitOfWork.Repository<Products>().GetAllAsync();
+
+        //    var normalizedProducts = products.Select(p => new
+        //    {
+        //        Product = p,
+        //        Name = NormalizeArabic(p.Name),
+        //        Keywords = string.IsNullOrEmpty(p.Keywords)
+        //            ? Array.Empty<string>()
+        //            : p.Keywords.Split(',').Select(k => NormalizeArabic(k)).ToArray()
+        //    }).ToList();
+
+        //    // 2) Split Text على:
+        //    // - سطر جديد / نقط / فواصل
+        //    // - " و " (واو العطف) ككلمة مستقلة
+        //    // - " ثم "
+        //    // - " وكمان "
+        //    var lines = Regex.Split(
+        //                     text,
+        //                     @"\sو\s+|\sثم\s+|\sوكمان\s+|[\n\.,،/\-]+")
+        //                     .Select(l => l.Trim())
+        //                     .Where(l => !string.IsNullOrWhiteSpace(l))
+        //                     .ToList();
+
+        //    foreach (var line in lines)
+        //    {
+        //        int quantity = ExtractNumber(line);
+
+        //        var match = FindProductMatch(line, normalizedProducts);
+
+        //        if (match == null)
+        //        {
+        //            results.Add(new AIParsedRequestItems
+        //            {
+        //                SchoolRequestId = request.Id,
+        //                ProductId = null,
+        //                ExtractedName = line,
+        //                Quantity = quantity,
+        //                Confidence = 0
+        //            });
+        //            continue;
+        //        }
+
+        //        var productMatch = match.Value;
+
+        //        results.Add(new AIParsedRequestItems
+        //        {
+        //            SchoolRequestId = request.Id,
+        //            ProductId = productMatch.Product.Id,
+        //            ExtractedName = productMatch.Product.Name,
+        //            Quantity = quantity,
+        //            Confidence = productMatch.Confidence
+        //        });
+        //    }
+
+        //    return results;
+        //}
+
+
+
+
         private async Task<List<AIParsedRequestItems>> ParseWithLocalLogicAsync(SchoolRequests request)
         {
             var text = NormalizeArabic(request.TextContent ?? "");
@@ -78,20 +147,26 @@ namespace optimum.service.TextRequestsParser
             // 1) Load Products
             var products = await _unitOfWork.Repository<Products>().GetAllAsync();
 
-            var normalizedProducts = products.Select(p => new
+            if (products == null || !products.Any())
+                return results;
+
+            // أول منتج هنستخدمه كـ default لو ملقيناش ماتش
+            var firstProduct = products.First();
+
+            // Normalize المنتج مرة واحدة
+            var normalizedProducts = products.Select(p => new NormalizedProduct
             {
                 Product = p,
-                Name = NormalizeArabic(p.Name),
+                NormalizedName = NormalizeArabic(p.Name),
                 Keywords = string.IsNullOrEmpty(p.Keywords)
                     ? Array.Empty<string>()
-                    : p.Keywords.Split(',').Select(k => NormalizeArabic(k)).ToArray()
+                    : p.Keywords
+                        .Split(',', StringSplitOptions.RemoveEmptyEntries)
+                        .Select(k => NormalizeArabic(k))
+                        .ToArray()
             }).ToList();
 
-            // 2) Split Text على:
-            // - سطر جديد / نقط / فواصل
-            // - " و " (واو العطف) ككلمة مستقلة
-            // - " ثم "
-            // - " وكمان "
+            // 2) تقسيم النص لأسطر / أجزاء
             var lines = Regex.Split(
                              text,
                              @"\sو\s+|\sثم\s+|\sوكمان\s+|[\n\.,،/\-]+")
@@ -107,31 +182,54 @@ namespace optimum.service.TextRequestsParser
 
                 if (match == null)
                 {
+                    // 🟢 لو فقدنا الأمل في الماتش → استخدم أول منتج
                     results.Add(new AIParsedRequestItems
                     {
                         SchoolRequestId = request.Id,
-                        ProductId = null,
-                        ExtractedName = line,
+                        ProductId = firstProduct.Id,
+                        ExtractedName = line,           // النص اللي اتكتب
                         Quantity = quantity,
-                        Confidence = 0
+                        Confidence = 0                 // ثقة قليلة
                     });
                     continue;
                 }
 
-                var productMatch = match.Value;
+                var (product, confidence) = match.Value;
 
                 results.Add(new AIParsedRequestItems
                 {
                     SchoolRequestId = request.Id,
-                    ProductId = productMatch.Product.Id,
-                    ExtractedName = productMatch.Product.Name,
+                    ProductId = product.Id,
+                    ExtractedName = product.Name,      // اسم المنتج الرسمي
                     Quantity = quantity,
-                    Confidence = productMatch.Confidence
+                    Confidence = confidence
                 });
             }
 
             return results;
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         // ========= 2) استدعاء DeepSeek (اختياري) =========
         private async Task<List<AiParsedItemDto>> CallDeepSeekParserAsync(
@@ -225,7 +323,6 @@ namespace optimum.service.TextRequestsParser
         }
 
         // ========= Helpers (Normalize / Regex) =========
-
         private string NormalizeArabic(string input)
         {
             if (string.IsNullOrWhiteSpace(input)) return "";
@@ -259,43 +356,112 @@ namespace optimum.service.TextRequestsParser
             return m.Success ? int.Parse(m.Value) : 1;
         }
 
+        //private (Products Product, double Confidence)? FindProductMatch(
+        //    string line,
+        //    IEnumerable<dynamic> normalizedProducts
+        //)
+        //{
+        //    double bestScore = 0;
+        //    Products bestProduct = null;
+
+        //    var normalizedLine = NormalizeArabic(line);
+
+        //    foreach (var np in normalizedProducts)
+        //    {
+        //        var product = np.Product;
+        //        var keywords = np.Keywords as string[] ?? Array.Empty<string>();
+
+        //        int matchCount = 0;
+
+        //        foreach (var keyword in keywords)
+        //        {
+        //            if (string.IsNullOrWhiteSpace(keyword)) continue;
+        //            if (normalizedLine.Contains(keyword))
+        //                matchCount++;
+        //        }
+
+        //        double score = (double)matchCount / Math.Max(1, keywords.Length);
+
+        //        if (score > bestScore)
+        //        {
+        //            bestScore = score;
+        //            bestProduct = product;
+        //        }
+        //    }
+
+        //    if (bestProduct == null || bestScore < 0.2)
+        //        return null;
+
+        //    return (bestProduct, bestScore);
+        //}
+
+
+
         private (Products Product, double Confidence)? FindProductMatch(
-            string line,
-            IEnumerable<dynamic> normalizedProducts
-        )
+    string line,
+    IEnumerable<NormalizedProduct> normalizedProducts
+)
         {
+            var normalizedLine = NormalizeArabic(line);
+
             double bestScore = 0;
             Products bestProduct = null;
 
-            var normalizedLine = NormalizeArabic(line);
-
             foreach (var np in normalizedProducts)
             {
-                var product = np.Product;
-                var keywords = np.Keywords as string[] ?? Array.Empty<string>();
+                double score = 0;
 
-                int matchCount = 0;
-
-                foreach (var keyword in keywords)
+                // 1) تطابق الاسم بالكامل أو جزئيًا
+                if (!string.IsNullOrWhiteSpace(np.NormalizedName) &&
+                    normalizedLine.Contains(np.NormalizedName))
                 {
-                    if (string.IsNullOrWhiteSpace(keyword)) continue;
-                    if (normalizedLine.Contains(keyword))
-                        matchCount++;
+                    score += 2.0; // وزن أعلى للاسم
                 }
 
-                double score = (double)matchCount / Math.Max(1, keywords.Length);
+                // 2) تطابق الـ Keywords
+                if (np.Keywords != null && np.Keywords.Length > 0)
+                {
+                    int matchCount = 0;
+
+                    foreach (var keyword in np.Keywords)
+                    {
+                        if (string.IsNullOrWhiteSpace(keyword)) continue;
+                        if (normalizedLine.Contains(keyword))
+                            matchCount++;
+                    }
+
+                    if (matchCount > 0)
+                    {
+                        // نسبة التطابق بالنسبة لعدد الـ keywords
+                        score += (double)matchCount / np.Keywords.Length;
+                    }
+                }
 
                 if (score > bestScore)
                 {
                     bestScore = score;
-                    bestProduct = product;
+                    bestProduct = np.Product;
                 }
             }
 
+            // لو مفيش أي حاجة مقنعة
             if (bestProduct == null || bestScore < 0.2)
                 return null;
 
             return (bestProduct, bestScore);
         }
+
+
+
+
+        private class NormalizedProduct
+        {
+            public Products Product { get; set; }
+            public string NormalizedName { get; set; }
+            public string[] Keywords { get; set; }
+        }
+
+
+
     }
 }
