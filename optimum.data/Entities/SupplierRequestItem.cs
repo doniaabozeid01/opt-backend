@@ -19,7 +19,7 @@ namespace optimum.data.Entities
         public SchoolConfirmedRequestItems SchoolConfirmedRequestItem { get; set; }
 
         // ========== Snapshot للعرض ==========
-        public int ProductId { get; set; }
+        public int? ProductId { get; set; }
         public Products Product { get; set; }
 
         public string ProductName { get; set; }

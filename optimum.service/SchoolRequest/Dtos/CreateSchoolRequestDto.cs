@@ -12,7 +12,7 @@ namespace optimum.service.SchoolRequest.Dtos
         public int SchoolId { get; set; }
 
         // Text أو Form فقط هنا
-        public RequestTypeEnum RequestType { get; set; }
+        // public RequestTypeEnum RequestType { get; set; }
 
         // لو نوع الطلب Text
         //public string TextContent { get; set; }

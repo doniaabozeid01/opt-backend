@@ -24,7 +24,8 @@ namespace optimum.data.Entities
         public string? AudioPath { get; set; }             // لو Voice Record
 
         // ---- حالة الطلب ----
-        public string Status { get; set; } = "Pending";   // Pending – AI_Analyzed – Confirmed – Completed
+        //public string Status { get; set; } = "Pending";   // Pending – AI_Analyzed – Confirmed – Completed
+        public RequestStatusEnum Status { get; set; } = RequestStatusEnum.Pending;
 
         // ---- من اللي رفع الطلب ----
         //public string CreatedByUserId { get; set; }

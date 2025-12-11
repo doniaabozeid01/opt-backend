@@ -9,9 +9,11 @@ using optimum.repository.Interfaces;
 using optimum.repository.Repositories;
 using optimum.service.Authentication;
 using optimum.service.Product;
+using optimum.service.SchoolRequest;
 using optimum.service.Schools;
 using optimum.service.Supplier;
 using optimum.service.SupplierOffer;
+using optimum.service.SupplierOfferParser;
 using optimum.service.SupplierRate;
 using optimum.service.SupplierRequests;
 using optimum.service.TextRequestsParser;
@@ -87,13 +89,10 @@ namespace optimum
             builder.Services.AddScoped<ISupplierRequestService, SupplierRequestsService>();
             builder.Services.AddScoped<IRatingSupplierService, RatingSupplierService>();
             builder.Services.AddScoped<ISupplierOfferService, SupplierOfferService>();
-
-
+            builder.Services.AddScoped<ISchoolRequestService, SchoolRequestService>();
+            builder.Services.AddScoped<ISupplierOfferParserService, SupplierOfferParserService>();
 
             builder.Services.AddControllers();
-
-
-
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();

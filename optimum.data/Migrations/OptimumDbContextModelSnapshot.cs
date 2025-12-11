@@ -346,7 +346,7 @@ namespace optimum.data.Migrations
                     b.Property<string>("Notes")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ProductId")
+                    b.Property<int?>("ProductId")
                         .HasColumnType("int");
 
                     b.Property<string>("ProductName")
@@ -422,9 +422,8 @@ namespace optimum.data.Migrations
                     b.Property<int>("SchoolId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
 
                     b.Property<string>("TextContent")
                         .HasColumnType("nvarchar(max)");
@@ -657,7 +656,7 @@ namespace optimum.data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ProductId")
+                    b.Property<int?>("ProductId")
                         .HasColumnType("int");
 
                     b.Property<string>("ProductName")
@@ -819,9 +818,7 @@ namespace optimum.data.Migrations
 
                     b.HasOne("optimum.data.Entities.Products", "Product")
                         .WithMany()
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ProductId");
 
                     b.HasOne("optimum.data.Entities.SchoolRequests", "SchoolRequest")
                         .WithMany()
@@ -953,9 +950,7 @@ namespace optimum.data.Migrations
                 {
                     b.HasOne("optimum.data.Entities.Products", "Product")
                         .WithMany()
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ProductId");
 
                     b.HasOne("optimum.data.Entities.SchoolConfirmedRequestItems", "SchoolConfirmedRequestItem")
                         .WithMany()

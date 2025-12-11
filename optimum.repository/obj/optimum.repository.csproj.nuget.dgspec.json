@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ME\\backend\\opt-backend\\optimum.repository\\optimum.repository.csproj": {}
+    "C:\\Users\\pc\\faculty\\my-work\\optimum\\Backend\\opt-backend\\optimum.repository\\optimum.repository.csproj": {}
   },
   "projects": {
-    "E:\\ME\\backend\\opt-backend\\optimum.data\\optimum.data.csproj": {
+    "C:\\Users\\pc\\faculty\\my-work\\optimum\\Backend\\opt-backend\\optimum.data\\optimum.data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ME\\backend\\opt-backend\\optimum.data\\optimum.data.csproj",
+        "projectUniqueName": "C:\\Users\\pc\\faculty\\my-work\\optimum\\Backend\\opt-backend\\optimum.data\\optimum.data.csproj",
         "projectName": "optimum.data",
-        "projectPath": "E:\\ME\\backend\\opt-backend\\optimum.data\\optimum.data.csproj",
+        "projectPath": "C:\\Users\\pc\\faculty\\my-work\\optimum\\Backend\\opt-backend\\optimum.data\\optimum.data.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "E:\\ME\\backend\\opt-backend\\optimum.data\\obj\\",
+        "outputPath": "C:\\Users\\pc\\faculty\\my-work\\optimum\\Backend\\opt-backend\\optimum.data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages"
         ],
         "configFilePaths": [
           "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,13 +39,7 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -85,25 +80,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\ME\\backend\\opt-backend\\optimum.repository\\optimum.repository.csproj": {
+    "C:\\Users\\pc\\faculty\\my-work\\optimum\\Backend\\opt-backend\\optimum.repository\\optimum.repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ME\\backend\\opt-backend\\optimum.repository\\optimum.repository.csproj",
+        "projectUniqueName": "C:\\Users\\pc\\faculty\\my-work\\optimum\\Backend\\opt-backend\\optimum.repository\\optimum.repository.csproj",
         "projectName": "optimum.repository",
-        "projectPath": "E:\\ME\\backend\\opt-backend\\optimum.repository\\optimum.repository.csproj",
+        "projectPath": "C:\\Users\\pc\\faculty\\my-work\\optimum\\Backend\\opt-backend\\optimum.repository\\optimum.repository.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "E:\\ME\\backend\\opt-backend\\optimum.repository\\obj\\",
+        "outputPath": "C:\\Users\\pc\\faculty\\my-work\\optimum\\Backend\\opt-backend\\optimum.repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages"
         ],
         "configFilePaths": [
           "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -111,14 +106,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\ME\\backend\\opt-backend\\optimum.data\\optimum.data.csproj": {
-                "projectPath": "E:\\ME\\backend\\opt-backend\\optimum.data\\optimum.data.csproj"
+              "C:\\Users\\pc\\faculty\\my-work\\optimum\\Backend\\opt-backend\\optimum.data\\optimum.data.csproj": {
+                "projectPath": "C:\\Users\\pc\\faculty\\my-work\\optimum\\Backend\\opt-backend\\optimum.data\\optimum.data.csproj"
               }
             }
           }
@@ -127,13 +123,7 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -154,7 +144,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

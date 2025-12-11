@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using optimum.data.Entities;
 using optimum.data.Enum;
 using optimum.repository.Interfaces;
+using optimum.service.SchoolRequest;
 using optimum.service.SchoolRequest.Dtos;
 using optimum.service.TextRequestsParser;
 
@@ -17,36 +18,79 @@ namespace optimum.Controllers
 
         private readonly IUnitOfWork _unitOfWork;
         private readonly ITextRequestParserService _aiParserService;
-
-        public SchoolRequestController(IUnitOfWork unitOfWork, ITextRequestParserService aiParserService)
+        private readonly ISchoolRequestService _schoolRequestService;
+        public SchoolRequestController(IUnitOfWork unitOfWork, ITextRequestParserService aiParserService, ISchoolRequestService schoolRequestService )
         {
             _unitOfWork = unitOfWork;
-            _aiParserService = aiParserService; 
+            _aiParserService = aiParserService;
+            _schoolRequestService = schoolRequestService;
         }
 
+
+
         // POST: api/SchoolRequests
+        //[HttpPost("CreateByList")]
+        //public async Task<IActionResult> Create ([FromBody] CreateSchoolRequestDto dto)
+        //{
+        //    if (!ModelState.IsValid)
+        //        return BadRequest(ModelState);
+
+        //    //if (dto.RequestType != RequestTypeEnum.Text && dto.RequestType != RequestTypeEnum.Form)
+        //    //    return BadRequest("RequestType must be Text or Form in this endpoint.");
+
+        //    var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value; // من التوكن
+
+        //    var request = new SchoolRequests
+        //    {
+        //        SchoolId = dto.SchoolId,
+        //        RequestType = RequestTypeEnum.Form,
+        //        Status = RequestStatusEnum.Pending,
+        //        CreatedAt = DateTime.UtcNow,
+        //        //CreatedByUserId = userId
+        //    };
+
+        //    // لو Form وفيه Items
+        //    if (dto.Items != null && dto.Items.Any())
+        //    {
+        //        request.Items = dto.Items.Select(i => new SchoolRequestItems
+        //        {
+        //            ProductName = i.ProductName,
+        //            Quantity = i.Quantity,
+        //            Notes = i.Notes
+        //        }).ToList();
+        //    }
+
+        //    await _unitOfWork.Repository<SchoolRequests>().AddAsync(request);
+        //    await _unitOfWork.CompleteAsync();
+
+        //    return Ok(new { request.Id });
+        //}
+
+
+
+
+
+
+
+
+
+
         [HttpPost("CreateByList")]
-        public async Task<IActionResult> Create ([FromBody] CreateSchoolRequestDto dto)
+        public async Task<IActionResult> Create([FromBody] CreateSchoolRequestDto dto)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            if (dto.RequestType != RequestTypeEnum.Text && dto.RequestType != RequestTypeEnum.Form)
-                return BadRequest("RequestType must be Text or Form in this endpoint.");
-
-            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value; // من التوكن
-
             var request = new SchoolRequests
             {
                 SchoolId = dto.SchoolId,
-                RequestType = dto.RequestType,
-                Status = "Pending",
+                RequestType = RequestTypeEnum.Form,
+                Status = RequestStatusEnum.Pending,
                 CreatedAt = DateTime.UtcNow,
-                //CreatedByUserId = userId
             };
 
-            // لو Form وفيه Items
-            if (dto.RequestType == RequestTypeEnum.Form && dto.Items != null && dto.Items.Any())
+            // لو عايزة تحتفظي بالـ Items الأصلية
+            if (dto.Items != null && dto.Items.Any())
             {
                 request.Items = dto.Items.Select(i => new SchoolRequestItems
                 {
@@ -56,11 +100,101 @@ namespace optimum.Controllers
                 }).ToList();
             }
 
+            // 1) نحفظ الطلب الأول عشان ناخد Id
             await _unitOfWork.Repository<SchoolRequests>().AddAsync(request);
             await _unitOfWork.CompleteAsync();
 
-            return Ok(new { request.Id });
+            var aiRepo = _unitOfWork.Repository<AIParsedRequestItems>();
+            var confirmRepo = _unitOfWork.Repository<SchoolConfirmedRequestItems>();
+
+            var aiItems = new List<AIParsedRequestItems>();
+
+            // 2) نمسك كل item في الفورم ونحاول نتوقع الـ ProductId
+            foreach (var item in dto.Items)
+            {
+                var (productId, confidence) =
+                    await _aiParserService.PredictProductIdFromNameAsync(item.ProductName);
+
+                var aiItem = new AIParsedRequestItems
+                {
+                    SchoolRequestId = request.Id,
+                    ProductId = productId,                 // ممكن تبقى null لو مفيش ماتش حلو
+                    ExtractedName = item.ProductName,      // الاسم اللي المدرسة كتبته
+                    Quantity = item.Quantity,
+                    Notes = item.Notes,
+                    Confidence = confidence
+                };
+
+                await aiRepo.AddAsync(aiItem);
+                aiItems.Add(aiItem);
+            }
+
+            await _unitOfWork.CompleteAsync();
+
+            // 3) نولّد SchoolConfirmedRequestItems زي CreateFreeTxt
+            //foreach (var ai in aiItems)
+            //{
+            //    var confirmItem = new SchoolConfirmedRequestItems
+            //    {
+            //        SchoolRequestId = ai.SchoolRequestId,
+            //        ProductId = ai.ProductId ?? 0,                      // اقتراح السيستم، ممكن null
+            //        ProductName = ai.Product.Name ?? "", // لو مفيش ProductId نعرض الاسم اللي اتكتب
+            //        Quantity = ai.Quantity,
+            //        Notes = ai.Notes,
+            //        IsConfirmed = false,                           // اليوزر لسه ما أكّدش
+            //        ConfirmedAt = DateTime.UtcNow,
+            //        AIParsedItemId = ai.Id
+            //    };
+
+            //    await confirmRepo.AddAsync(confirmItem);
+            //}
+
+
+
+            foreach (var ai in aiItems)
+            {
+                var confirmItem = new SchoolConfirmedRequestItems
+                {
+                    SchoolRequestId = ai.SchoolRequestId,
+                    ProductId = ai.ProductId,                 // سيبيه nullable لو الـ column يسمح
+                    ProductName = ai.ExtractedName,           // استخدمي الاسم اللي اتكتب/اتستخرج
+                    Quantity = ai.Quantity,
+                    Notes = ai.Notes,
+                    IsConfirmed = false,
+                    ConfirmedAt = DateTime.UtcNow,
+                    AIParsedItemId = ai.Id
+                };
+
+                await confirmRepo.AddAsync(confirmItem);
+            }
+
+
+            await _unitOfWork.CompleteAsync();
+
+            // 4) نحدّث حالة الطلب زي FreeTxt
+            request.Status = RequestStatusEnum.AI_Analyzed;
+            _unitOfWork.Repository<SchoolRequests>().Update(request);
+            await _unitOfWork.CompleteAsync();
+
+            return Ok(new { request.Id, message = "Created from list and analyzed locally" });
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -97,23 +231,21 @@ namespace optimum.Controllers
 
 
 
-
-
         [HttpPost("CreateFreeTxt")]
         public async Task<IActionResult> CreateFreeTxt([FromBody] CreateSchoolRequestFreeTxtDto dto)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            if (dto.RequestType != RequestTypeEnum.Text)
-                return BadRequest("RequestType must be Text in this endpoint.");
+            //if (dto.RequestType != RequestTypeEnum.Text)
+            //    return BadRequest("RequestType must be Text in this endpoint.");
 
             var request = new SchoolRequests
             {
                 SchoolId = dto.SchoolId,
-                RequestType = dto.RequestType,
+                RequestType = RequestTypeEnum.Text,
                 TextContent = dto.TextContent,
-                Status = "Pending",
+                Status = RequestStatusEnum.Pending,
                 CreatedAt = DateTime.UtcNow
             };
 
@@ -130,7 +262,6 @@ namespace optimum.Controllers
             }
             await _unitOfWork.CompleteAsync();
 
-
             // بعد ما تحفظي parsedItems في جدول AIParsedRequestItems
             var confirmRepo = _unitOfWork.Repository<SchoolConfirmedRequestItems>();
 
@@ -139,7 +270,7 @@ namespace optimum.Controllers
                 var confirmItem = new SchoolConfirmedRequestItems
                 {
                     SchoolRequestId = ai.SchoolRequestId,
-                    ProductId = ai.ProductId ?? 2,                      // اقتراح الـ AI إن وجد
+                    ProductId = ai.ProductId,                      // اقتراح الـ AI إن وجد
                     ProductName = ai.Product?.Name ?? ai.ExtractedName,
                     Quantity = ai.Quantity,
                     Notes = ai.Notes,
@@ -151,16 +282,17 @@ namespace optimum.Controllers
                 await confirmRepo.AddAsync(confirmItem);
             }
 
+
             await _unitOfWork.CompleteAsync();
 
 
-
             // Update status
-            request.Status = "AI_Analyzed";
+            request.Status = RequestStatusEnum.AI_Analyzed;
             _unitOfWork.Repository<SchoolRequests>().Update(request);
             await _unitOfWork.CompleteAsync();
 
             return Ok(new { request.Id, message = "Created and analyzed" });
+
         }
 
 
@@ -174,8 +306,8 @@ namespace optimum.Controllers
             if (dto.File == null || dto.File.Length == 0)
                 return BadRequest("File is required.");
 
-            if (dto.RequestType != RequestTypeEnum.File)
-                return BadRequest("RequestType must be File in this endpoint.");
+            //if (dto.RequestType != RequestTypeEnum.File)
+            //    return BadRequest("RequestType must be File in this endpoint.");
 
             var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
@@ -196,7 +328,7 @@ namespace optimum.Controllers
                 SchoolId = dto.SchoolId,
                 RequestType = RequestTypeEnum.File,
                 FilePath = filePath,
-                Status = "Pending",
+                Status = RequestStatusEnum.Pending,
                 CreatedAt = DateTime.UtcNow,
                 //CreatedByUserId = userId
             };
@@ -209,6 +341,8 @@ namespace optimum.Controllers
 
 
 
+
+
         // POST: api/SchoolRequests/voice
         [HttpPost("CreateFromVoice")]
         public async Task<IActionResult> CreateFromVoice([FromForm] CreateSchoolRequestVoiceDto dto)
@@ -216,8 +350,8 @@ namespace optimum.Controllers
             if (dto.Audio == null || dto.Audio.Length == 0)
                 return BadRequest("Audio file is required.");
 
-            if (dto.RequestType != RequestTypeEnum.Voice)
-                return BadRequest("RequestType must be Voice in this endpoint.");
+            //if (dto.RequestType != RequestTypeEnum.Voice)
+            //    return BadRequest("RequestType must be Voice in this endpoint.");
 
             var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
@@ -237,7 +371,7 @@ namespace optimum.Controllers
                 SchoolId = dto.SchoolId,
                 RequestType = RequestTypeEnum.Voice,
                 AudioPath = audioPath,
-                Status = "Pending",
+                Status = RequestStatusEnum.Pending,
                 CreatedAt = DateTime.UtcNow,
                 //CreatedByUserId = userId
             };
@@ -247,5 +381,24 @@ namespace optimum.Controllers
 
             return Ok(new { request.Id });
         }
+
+
+
+
+
+        // GET: api/SchoolRequests/school/5/stats
+        [HttpGet("school/{schoolId}/stats")]
+        public async Task<ActionResult<SchoolRequestsStatsDto>> GetSchoolStats(int schoolId)
+        {
+            var stats = await _schoolRequestService.GetSchoolRequestsStatsAsync(schoolId);
+
+            if (stats == null)
+                return NotFound();
+
+            return Ok(stats);
+        }
+    
+            
+    
     }
 }

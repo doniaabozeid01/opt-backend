@@ -463,5 +463,63 @@ namespace optimum.service.TextRequestsParser
 
 
 
+
+
+
+
+        public async Task<(int? productId, double confidence)> PredictProductIdFromNameAsync(string productText)
+        {
+            var results = await PredictProductsForLinesAsync(new List<string> { productText });
+
+            var first = results.FirstOrDefault();
+            if (first.ProductId == null)
+                return (null, 0);
+
+            return (first.ProductId, first.Confidence);
+        }
+
+
+        private async Task<List<(int? ProductId, double Confidence)>> PredictProductsForLinesAsync(
+        List<string> lines)
+        {
+            var results = new List<(int? ProductId, double Confidence)>();
+
+            // 1) Load Products
+            var products = await _unitOfWork.Repository<Products>().GetAllAsync();
+
+            if (products == null || !products.Any())
+                return results;
+
+            var normalizedProducts = products.Select(p => new NormalizedProduct
+            {
+                Product = p,
+                NormalizedName = NormalizeArabic(p.Name),
+                Keywords = string.IsNullOrEmpty(p.Keywords)
+                    ? Array.Empty<string>()
+                    : p.Keywords
+                        .Split(',', StringSplitOptions.RemoveEmptyEntries)
+                        .Select(k => NormalizeArabic(k))
+                        .ToArray()
+            }).ToList();
+
+            foreach (var line in lines)
+            {
+                var match = FindProductMatch(line, normalizedProducts);
+
+                if (match == null)
+                {
+                    // مفيش ماتش مقنع → نخليه null واليوزر يأكد
+                    results.Add((null, 0));
+                    continue;
+                }
+
+                var (product, confidence) = match.Value;
+                results.Add((product.Id, confidence));
+            }
+
+            return results;
+        }
+
+
     }
 }

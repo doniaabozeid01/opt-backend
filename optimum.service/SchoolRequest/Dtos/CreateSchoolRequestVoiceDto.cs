@@ -12,7 +12,7 @@ namespace optimum.service.SchoolRequest.Dtos
     {
         public int SchoolId { get; set; }
 
-        public RequestTypeEnum RequestType { get; set; } = RequestTypeEnum.Voice;
+        // public RequestTypeEnum RequestType { get; set; } = RequestTypeEnum.Voice;
 
         public IFormFile Audio { get; set; } // mp3 / wav
     }

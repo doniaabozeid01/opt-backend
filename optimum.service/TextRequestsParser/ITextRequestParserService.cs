@@ -10,7 +10,8 @@ namespace optimum.service.TextRequestsParser
     public interface ITextRequestParserService
     {
         Task<List<AIParsedRequestItems>> ParseAsync(SchoolRequests request);
-        
+
+        Task<(int? productId, double confidence)> PredictProductIdFromNameAsync(string productText);
 
 
     }

@@ -8,7 +8,7 @@ namespace optimum.data.Enum
 {
     public enum RequestTypeEnum
     {
-        Text,
+        Text ,
         File,
         Voice,
         Form

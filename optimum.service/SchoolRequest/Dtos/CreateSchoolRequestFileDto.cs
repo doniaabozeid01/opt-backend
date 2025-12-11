@@ -13,7 +13,7 @@ namespace optimum.service.SchoolRequest.Dtos
         public int SchoolId { get; set; }
 
         // لازم تكون File
-        public RequestTypeEnum RequestType { get; set; } = RequestTypeEnum.File;
+        //public RequestTypeEnum RequestType { get; set; } = RequestTypeEnum.File;
 
         public IFormFile File { get; set; }  // PDF / Word / Excel
     }

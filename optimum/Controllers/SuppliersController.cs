@@ -36,7 +36,7 @@ namespace optimum.Controllers
 
 
         // GET: api/SupplierRequests/by-supplier/5
-        [HttpGet("by-supplier/{supplierId:int}")]
+        [HttpGet("SupplierRequestsBy-supplier/{supplierId:int}")]
         public async Task<IActionResult> GetBySupplier(int supplierId)
         {
             var requests = await _supplierRequestService.GetSupplierRequestsAsync(supplierId);

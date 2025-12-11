@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "G50xuKFAMQQ=",
+  "dgSpecHash": "qaLHZUjaxPwkxRUt2irRdKTGu6rSoGtfrT4fxe0T3syxoiuV/dyj1b/xIFXcT5G3LWI02WmH7PY96q2UZKeKUg==",
   "success": true,
-  "projectFilePath": "E:\\ME\\backend\\opt-backend\\optimum.repository\\optimum.repository.csproj",
+  "projectFilePath": "C:\\Users\\pc\\faculty\\my-work\\optimum\\Backend\\opt-backend\\optimum.repository\\optimum.repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

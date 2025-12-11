@@ -12,7 +12,7 @@ namespace optimum.data.Entities
         public int SchoolRequestId { get; set; }
         public SchoolRequests SchoolRequest { get; set; }
         // المنتج الحقيقي اللي المدرسة اختارته من اللستة
-        public int ProductId { get; set; }
+        public int? ProductId { get; set; }
         public Products Product { get; set; }
         // اسم للعرض (ممكن يكون نفس اسم الـ Product أو اسم مخصص)
         public string ProductName { get; set; }

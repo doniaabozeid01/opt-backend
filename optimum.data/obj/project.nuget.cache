@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zGKUG1M6rhk=",
+  "dgSpecHash": "0mv56IrY/4Ad184P+aInhKObhgqcCqUqjNvoPncBpW5axk/pCiLORzgjGk2KY4cvZnaTf3/QwHEJkW4xczP7qg==",
   "success": true,
-  "projectFilePath": "E:\\ME\\backend\\opt-backend\\optimum.data\\optimum.data.csproj",
+  "projectFilePath": "C:\\Users\\pc\\faculty\\my-work\\optimum\\Backend\\opt-backend\\optimum.data\\optimum.data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pc\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

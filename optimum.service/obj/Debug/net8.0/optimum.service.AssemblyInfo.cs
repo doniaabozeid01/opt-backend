@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("optimum.service")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6af6735a48667bfb7eaf85c92ee4a8d1663e0a14")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("optimum.service")]
 [assembly: System.Reflection.AssemblyTitleAttribute("optimum.service")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
