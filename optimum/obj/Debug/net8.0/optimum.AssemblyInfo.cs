@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("optimum")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0adcd83d0a6a3a931a7423ff993a2d3686651445")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dabf5245e3b465db4fa0777c1069d98044ccf179")]
 [assembly: System.Reflection.AssemblyProductAttribute("optimum")]
 [assembly: System.Reflection.AssemblyTitleAttribute("optimum")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
